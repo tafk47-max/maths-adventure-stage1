@@ -451,6 +451,97 @@ details.rec summary::-webkit-details-marker{display:none}
 .updown{display:flex;flex-direction:column;align-items:center;font-size:64px;line-height:1.05}
 .patrow.xs{font-size:22px;gap:2px;flex-wrap:nowrap}
 .opt.pic .coinrow{margin:0}
+.vhbox{margin:12px 0 4px;padding:10px 12px;border:2.5px dashed var(--c);border-radius:16px;background:var(--cs)}
+.vhbox>.vhttl{display:block;font-weight:800;font-size:15px;margin-bottom:6px}
+.vhbox .vhcap{font-size:14.5px;color:var(--ink);margin:8px 0 0;font-weight:600}
+.vhbox svg,.vhbox table,.vhbox .tf,.vhbox .objs,.vhbox .groups,.vhbox .to{max-width:100%}
+.vhrow{display:flex;gap:10px;align-items:center;justify-content:center;flex-wrap:wrap}
+.vhrow>b{font-size:30px;font-family:"Baloo 2",sans-serif}
+.vhsvg{width:100%;height:auto}
+.pv{border-collapse:collapse;margin:0 auto;background:var(--card)}
+.pv th,.pv td{border:2px solid var(--line);padding:4px 16px;font-weight:800;font-size:20px;text-align:center}
+.pv th{font-size:12.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
+.tensbar{display:flex;gap:4px;justify-content:center;flex-wrap:wrap}
+.tensbar span{width:38px;height:44px;display:grid;place-items:center;border:2px solid var(--ink);border-radius:8px;font-weight:800;font-size:14px;background:var(--card);color:var(--muted)}
+.tensbar span.on{background:var(--c);color:#fff}
+.pairs{display:grid;grid-template-columns:repeat(2,28px);gap:6px;justify-content:center}
+.pairs i{width:24px;height:24px;border-radius:50%;background:var(--c);display:block}
+.pairs i.odd{background:var(--warn);grid-column:1/3;justify-self:center}
+.fwall{display:flex;flex-direction:column;gap:5px;max-width:330px;margin:0 auto}
+.fwrow{display:flex;gap:4px}
+.fwrow span{flex:1;background:var(--c);color:#fff;border:2px solid var(--ink);border-radius:7px;text-align:center;font-weight:800;font-size:12px;padding:5px 0}
+.ordrow,.turnrow{display:flex;gap:8px;justify-content:center;flex-wrap:wrap}
+.ordrow span,.turnrow span{display:flex;flex-direction:column;align-items:center;font-weight:800;font-size:12.5px}
+.turnrow b{font-size:30px}
+.ordrow span{font-size:22px}
+.ordrow b{font-size:13px}
+.ladder{display:flex;gap:5px;justify-content:center;align-items:center;flex-wrap:wrap;font-weight:800;font-size:13px}
+.ladder span{background:var(--card);border:2px solid var(--ink);border-radius:9px;padding:4px 8px}
+.shchart{display:flex;gap:8px;justify-content:center;flex-wrap:wrap}
+.shchart span{display:flex;flex-direction:column;align-items:center;width:88px}
+.shchart svg{width:82px;height:auto}
+.shchart b{font-size:12.5px}
+.pnav{background:var(--card);border:2px solid var(--ink);border-radius:22px;padding:14px 16px;margin:14px 0 6px;box-shadow:5px 5px 0 var(--c)}
+.pnavgrp+.pnavgrp{margin-top:13px;padding-top:13px;border-top:2px solid var(--line)}
+.pnavlab{display:block;font-size:12px;font-weight:800;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);margin:0 0 8px}
+.tabs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:0}
+.tab{display:flex;align-items:center;gap:8px;justify-content:flex-start;text-align:left;border:2px solid var(--line);background:var(--card);border-radius:14px;padding:9px 11px;font-weight:800;font-size:15px;line-height:1.15;cursor:pointer;min-height:48px}
+.tab .ti{font-size:18px;flex:none}
+.tab .tl{min-width:0}
+.tab.sel{background:var(--c);color:var(--btnink);border-color:var(--ink)}
+.lpick{display:flex;gap:8px;flex-wrap:wrap;margin:0}
+.chip.sel{border-color:var(--ink)}
+.rangecard{background:var(--card);border:2px solid var(--line);border-radius:18px;padding:12px 14px;margin:14px 0}
+.rquick{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.rquick .tab{justify-content:center;text-align:center;font-size:14px;min-height:44px;padding:8px 6px}
+.rdates{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:10px;font-weight:800;font-size:15px}
+.rdates input{font:inherit;padding:7px 9px;border:2px solid var(--line);border-radius:12px;background:var(--bg);color:var(--ink);min-height:44px}
+.rnote{margin:9px 0 0;color:var(--muted);font-weight:700;font-size:14px}
+.exprow{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.expmsg{font-weight:700;color:var(--muted);font-size:15px}
+@media(min-width:720px){.tabs{grid-template-columns:repeat(4,minmax(0,1fr))}.pnav{padding:16px 18px}}
+@media(max-width:360px){.tabs{grid-template-columns:1fr}}
+.groups .grp:empty{min-width:92px;min-height:66px;display:inline-block}
+.ivh-count{font-weight:800;text-align:center;margin:8px 0 0;font-size:16px}
+.ivh-pool{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;min-height:50px;padding:6px;border:2px dashed var(--line);border-radius:12px;background:var(--card)}
+.ivh-drag{font-size:28px;line-height:1;touch-action:none;cursor:grab;user-select:none;-webkit-user-select:none}
+.ivh-drag.lifting{opacity:.25}
+.ivh-ghost{position:fixed;z-index:9999;font-size:34px;line-height:1;pointer-events:none;transform:scale(1.15);filter:drop-shadow(0 4px 6px rgba(0,0,0,.3))}
+.ivh-groups{display:flex;gap:8px;justify-content:center;margin-top:10px;flex-wrap:wrap}
+.ivh-grp{flex:1 1 110px;min-height:84px;border:3px solid var(--c);border-radius:16px;padding:6px;display:flex;flex-wrap:wrap;gap:4px;align-content:flex-start;justify-content:center;background:var(--card)}
+.ivh-groups.many .ivh-grp{flex-basis:64px;min-height:70px}
+.ivh-grp b{width:100%;text-align:center;font-size:12px;color:var(--muted)}
+.ivh-grp .ivh-drag{font-size:24px}
+.ivh-drop.over{outline:3px solid var(--sun);outline-offset:2px}
+.ivh-tf{display:flex;gap:8px;justify-content:center;flex-wrap:wrap}
+.ivh-frame{display:grid;grid-template-columns:repeat(5,32px);grid-auto-rows:32px;gap:3px;background:var(--card);border:3px solid var(--ink);border-radius:10px;padding:3px}
+.ivh-frame i{border:1.5px solid var(--line);border-radius:6px;display:grid;place-items:center;font-size:19px;font-style:normal;cursor:pointer}
+.ivh-frame i.f{cursor:default}
+.ivh-track{display:grid;grid-template-columns:repeat(11,minmax(0,1fr));gap:3px;max-width:440px;margin:0 auto}
+.ivh-track span{height:34px;font-size:14px;display:grid;place-items:center;border:2px solid var(--line);border-radius:8px;font-weight:800;background:var(--card);cursor:pointer}
+.ivh-track span.trail{background:var(--cs);border-color:var(--c)}
+.ivh-track span.goal{border-color:var(--sun);border-width:3px}
+.ivh-track span.on{background:var(--c);color:#fff;border-color:var(--ink)}
+.ivh-to{display:flex;gap:6px;justify-content:center;align-items:flex-end;flex-wrap:nowrap}
+.ivh-rodrow{display:flex;gap:4px;align-items:flex-end}
+.ivh-rod{display:grid;grid-template-columns:16px;grid-auto-rows:12px;gap:1px;padding:3px;border:2.5px solid var(--ink);border-radius:7px;background:var(--card);cursor:pointer}
+.ivh-rod i{background:var(--c);border-radius:2px;display:block}
+.ivh-onesbox{display:flex;flex-direction:column;align-items:center;gap:4px;padding:5px 6px;border:2px dashed var(--line);border-radius:12px;background:var(--card)}
+.ivh-onesbox.fresh{border-color:var(--c);border-style:solid}
+.ivh-onesbox b{font-size:10px;line-height:1.2;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;text-align:center;max-width:100px}
+.ivh-ones{display:grid;grid-template-columns:repeat(5,17px);gap:3px}
+.ivh-ones i{height:17px;background:var(--sun);border:1.5px solid var(--ink);border-radius:4px;display:block;cursor:pointer}
+.ivh-ones i.gone{background:var(--line);border-style:dashed;opacity:.55}
+.ivh-clockwrap{display:flex;flex-direction:column;align-items:center;gap:6px}
+.ivh-modes{display:flex;gap:8px;flex-wrap:wrap;justify-content:center}
+.ivh-mode.on{background:var(--c);color:#fff;border-color:var(--ink)}
+.ivh-clock{width:230px;max-width:100%;height:auto;touch-action:none;cursor:pointer}
+.ivh-carroll{border-collapse:collapse;margin:6px auto 0;background:var(--card)}
+.ivh-carroll th,.ivh-carroll td{border:2.5px solid var(--ink);padding:5px 7px;font-weight:800;font-size:13px;text-align:center;min-width:88px;height:62px;vertical-align:middle}
+.ivh-carroll th{background:var(--cs);font-size:12.5px}
+.ivh-carroll td{cursor:pointer;position:relative}
+.ivh-carroll td small{position:absolute;top:3px;left:6px;font-size:11px;color:var(--muted)}
+.ivh-chip{display:inline-block;background:var(--sun);color:#1F2A5A;border:2px solid var(--ink);border-radius:10px;padding:1px 10px;font-weight:800;font-size:20px}
 </style>
 </head>
 <body>
@@ -609,13 +700,13 @@ const TOPICS=[
  gen(){const k=pick(['name','name','word','zero','zero','teen','teen','split','regroup','twm']);
   if(k==='name'){const n=R(0,20);let alt=[n+1,n-1,n+10,n-10].filter(x=>x>=0&&x<=20&&x!==n);if(n>=13&&n<=19)alt.push(n%10*10);return{obj:'1Ni.01',kind:'Number names',text:`Which number is "${numberWord(n)}"?`,type:'mc',options:fillOpts(n,alt.length>=3?alt:[n+1,n+2,Math.max(0,n-1),n+3]),answer:String(n),hint:'Say the word slowly. Teen words end in "teen".'}}
   if(k==='word'){const n=R(0,20);const pool=[n+1,n-1,n+10,n-10,n+2].filter(x=>x>=0&&x<=20&&x!==n).map(numberWord);if(n>=13&&n<=19)pool.unshift(numberWord(n%10*10));return{obj:'1Ni.01',kind:'Writing number names',text:`How do we write ${n} in words?`,type:'mc',options:fillOpts(numberWord(n),pool),answer:numberWord(n),hint:'Read each word out loud.'}}
-  if(k==='zero'){return pick([{obj:'1Np.01',kind:'Zero means none',text:'How many cookies are on the empty plate?',visual:'<div class="big3d">🍽️</div>',type:'num',answer:0,hint:'Empty means there are none.'},{obj:'1Np.01',kind:'Zero means none',text:'Which number means "none"?',type:'mc',options:['0','1','10'],answer:'0',big:true,hint:'It is the number before 1.'},(()=>{const n=R(2,6),e=pick(ITEMS);return{obj:'1Np.01',kind:'Zero means none',text:`There are ${n} ${NAMES[e]}. All ${n} are eaten or taken away. How many are left?`,visual:objs(n,e,n),type:'num',answer:0,hint:'If all of them are gone, none are left.'}})()])}
+  if(k==='zero'){return pick([{obj:'1Np.01',kind:'Zero means none',text:'How many cookies are on the empty plate?',visual:'<div class="big3d">🍽️</div>',type:'num',answer:0,hint:'Empty means there are none.'},{obj:'1Np.01',kind:'Zero means none',text:'Which number means "none"?',type:'mc',options:['0','1','10'],answer:'0',big:true,hint:'It is the number that comes before 1.'},(()=>{const n=R(2,6),e=pick(ITEMS);return{obj:'1Np.01',kind:'Zero means none',text:`There are ${n} ${NAMES[e]}. All ${n} are eaten or taken away. How many are left?`,visual:objs(n,e,n),type:'num',answer:0,hint:'If all of them are gone, none are left.'}})()])}
   if(k==='teen'){const o=R(1,9);if(Math.random()<.5)return{obj:'1Np.02',kind:'Ten and some ones',text:`10 and ${o} make what number?`,visual:tenFrames(10+o,'🔵'),type:'num',answer:10+o,hint:'Start at 10 and count on the extra ones.'};return{obj:'1Np.02',kind:'Ten and some ones',text:`${10+o} is 10 and how many more?`,visual:tensOnes(1,o),type:'num',answer:o,hint:`The stick is 10. Count the small cubes.`}}
   if(k==='split'){const n=R(11,20),a=R(10,n-1);return{obj:'1Np.02',kind:'Splitting a number',text:`${n} = ${a} + ?`,type:'num',answer:n-a,hint:`Count on from ${a} to ${n}.`}}
   if(k==='regroup'){const o=R(1,9);return{obj:'1Np.02',kind:'Regrouping a teen number',text:`${10+o} is 10 and ${o}. It is also 9 and how many?`,type:'num',answer:o+1,hint:'Take 1 from the 10. Give it to the ones.'}}
   const o=R(1,9),right=Math.random()<.4,s=right?10+o:o*10+1;return{obj:'1Np.02',kind:'Thinking: is it right?',text:`${pick(KIDS)} says 10 and ${o} make ${s}. Is that right?`,type:'mc',options:YN,answer:s===10+o?'Yes':'No',hint:`Count on ${o} from 10.`}},
  chal(){const k=R(0,1);if(k===0){const t=R(2,9),o=R(0,9);return{obj:'2Np.02',kind:'Challenge: tens and ones to 100',text:'What number do the blocks show?',visual:tensOnes(t,o),type:'num',answer:t*10+o,hint:'Count the long sticks in 10s, then count on the small cubes.'}}
-  const n=R(21,99);return{obj:'2Ni.01',kind:'Challenge: number names to 100',text:`Which number is "${numberWord(n)}"?`,type:'mc',options:fillOpts(n,[n%10*10+Math.floor(n/10),n+10>99?n-10:n+10,n-1]),answer:String(n),hint:'The first word tells you the tens.'}}},
+  const n=R(21,99);return{obj:'2Ni.01',kind:'Challenge: number names to 100',text:`Which number is "${numberWord(n)}"?`,type:'mc',options:fillOpts(n,[n%10*10+Math.floor(n/10),n+10>99?n-10:n+10,n-1]),answer:String(n),hint:'The first part of the word tells you the tens.'}}},
 
 {id:'compare',strand:0,emoji:'🐊',title:'Comparing and Ordering',tag:'More, fewer, bigger, smaller, and 1st to 10th',objs:['1Np.03','1Np.04'],
  intro:`<p>We can compare groups: which has <b>more</b>, which has <b>fewer</b>, or are they the <b>same</b>?</p><p>We can compare numbers: which is <b>bigger</b> and which is <b>smaller</b>. On a number track, bigger numbers are further along.</p><p>We can put numbers <b>in order</b>, from smallest to biggest.</p><p>Words like <b>1st, 2nd, 3rd … 10th</b> tell us the <b>position</b> of something in a line.</p>`,
@@ -623,9 +714,9 @@ const TOPICS=[
  gen(){const k=pick(['more','bigger','bigger','smallest','order','between','ord','ord','ordw','twm']);const three=()=>{const s=new Set();while(s.size<3)s.add(R(0,20));return [...s]};
   if(k==='more'){const e=pick(ITEMS),f=pick(ITEMS.filter(x=>x!==e));let a=R(2,10),b=R(2,10);while(b===a)b=R(2,10);const more=Math.random()<.5;return{obj:'1Np.03',kind:more?'Which group has more':'Which group has fewer',text:`Are there ${more?'more':'fewer'} ${NAMES[e]} or ${NAMES[f]}?`,visual:`<div class="purses"><div class="purse">${objs(a,e)}</div><div class="purse">${objs(b,f)}</div></div>`,type:'mc',options:[cap(NAMES[e]),cap(NAMES[f])],answer:cap(NAMES[(more?a>b:a<b)?e:f]),hint:'Count each group, or match them up one to one.'}}
   if(k==='bigger'){const a=R(0,20);let b=R(0,20);while(b===a)b=R(0,20);const big=Math.random()<.5;return{obj:'1Np.03',kind:big?'Bigger number':'Smaller number',text:`Which number is ${big?'bigger':'smaller'}?`,type:'mc',options:[String(a),String(b)],answer:String(big?Math.max(a,b):Math.min(a,b)),big:true,hint:'Which comes later when you count? That one is bigger.'}}
-  if(k==='smallest'){const arr=three(),big=Math.random()<.5;return{obj:'1Np.03',kind:big?'Biggest number':'Smallest number',text:`Which is the ${big?'biggest':'smallest'} number?`,type:'mc',options:arr.map(String),answer:String(big?Math.max(...arr):Math.min(...arr)),big:true,hint:'Find each number on a number track in your head.'}}
+  if(k==='smallest'){const arr=three(),big=Math.random()<.5;return{obj:'1Np.03',kind:big?'Biggest number':'Smallest number',text:`Which is the ${big?'biggest':'smallest'} number?`,type:'mc',options:arr.map(String),answer:String(big?Math.max(...arr):Math.min(...arr)),big:true,hint:'Think of a number track. The smaller number comes first.'}}
   if(k==='order'){const asc=three().sort((x,y)=>x-y),right=asc.join(', ');const o=new Set([right]);let g=0;while(o.size<3&&g<30){g++;o.add(shuffle(asc).join(', '))}return{obj:'1Np.03',kind:'Ordering numbers',text:'Which list goes from smallest to biggest?',type:'mc',options:shuffle([...o]),answer:right,hint:'The smallest number must come first.'}}
-  if(k==='between'){const a=R(0,18);return{obj:'1Np.03',kind:'Number in between',text:`Which number comes between ${a} and ${a+2}?`,type:'mc',options:shuffle([a+1,a,a+2].map(String)),answer:String(a+1),big:true,hint:`Count on from ${a}.`}}
+  if(k==='between'){const a=R(0,18);return{obj:'1Np.03',kind:'Number in between',text:`Which number comes between ${a} and ${a+2}?`,type:'mc',options:shuffle([a+1,a,a+2].map(String)),answer:String(a+1),big:true,hint:`Count on from ${a}. What comes next?`}}
   if(k==='ord'){const n=R(5,10),row=shuffle(ANIMALS).slice(0,n),i=R(0,n-1),ords=[...Array(10)].map((_,j)=>sayOrd(j+1));const vis=`<div class="patrow xs"><span>🏁</span>${row.map(a=>`<span>${a}</span>`).join('')}</div>`;
    if(Math.random()<.5)return{obj:'1Np.04',kind:'Ordinal numbers (1st to 10th)',text:`Which animal is ${ords[i]} in the line? The 1st is next to the flag.`,visual:vis,type:'mc',options:shuffle([row[i],...shuffle(row.filter((_,j)=>j!==i)).slice(0,2)]),answer:row[i],big:true,hint:'Start at the flag and count: 1st, 2nd, 3rd…'};
    return{obj:'1Np.04',kind:'Ordinal numbers (1st to 10th)',text:`What place is the ${row[i]} in? The 1st is next to the flag.`,visual:vis,type:'mc',options:fillOpts(ords[i],ords.slice(0,n)),answer:ords[i],hint:'Start at the flag and count: 1st, 2nd, 3rd…'}}
@@ -644,11 +735,11 @@ const TOPICS=[
   if(k==='w20'){const a=R(1,12),b=R(1,Math.min(9,20-a));return{obj:'1Ni.05',kind:'Adding within 20',text:`${a} + ${b} = ?`,type:'num',answer:a+b,hint:`Start at ${Math.max(a,b)} and count on ${Math.min(a,b)}.`}}
   if(k==='dbl'){const n=R(1,10);return Math.random()<.6?{obj:'1Ni.06',kind:'Doubles to double 10',text:`What is double ${n}?`,visual:`<div class="plus">${objs(n,'🔵')}<b>+</b>${objs(n,'🔵')}</div>`,type:'num',answer:2*n,hint:`Double means ${n} + ${n}.`}:{obj:'1Ni.06',kind:'Doubles to double 10',text:`${n} + ${n} = ?`,type:'num',answer:2*n,hint:'Adding a number to itself is a double.'}}
   if(k==='est'){let a,b;do{a=R(2,9);b=R(2,9)}while(a+b===10);return{obj:'1Ni.05',kind:'Estimating a sum',text:`Without working it out: is ${a} + ${b} more than 10 or less than 10?`,type:'mc',options:['More than 10','Less than 10'],answer:a+b>10?'More than 10':'Less than 10',hint:'Think of the pair that makes 10. Is the other number bigger or smaller?'}}
-  if(k==='word'){const n=pick(KIDS),th=pick(['stickers','shells','crayons','marbles']),a=R(3,12),b=R(2,Math.min(8,20-a));return{obj:'1Ni.05',kind:'Adding word problems',text:`${n} has ${a} ${th} and gets ${b} more. How many ${th} now?`,type:'num',answer:a+b,hint:`"More" means add: ${a} + ${b}.`}}
+  if(k==='word'){const n=pick(KIDS),th=pick(['stickers','shells','crayons','marbles']),a=R(3,12),b=R(2,Math.min(8,20-a));return{obj:'1Ni.05',kind:'Adding word problems',text:`${n} has ${a} ${th} and gets ${b} more. How many ${th} now?`,type:'num',answer:a+b,hint:`"More" means add. Work out ${a} + ${b}.`}}
   const a=R(5,12),b=R(2,6);return{obj:'1Ni.02',kind:'Thinking: spot the mistake',text:`${pick(KIDS)} counts on to add ${a} + ${b} and says: "${[...Array(b)].map((_,i)=>a+i).join(', ')}". So ${a} + ${b} = ${a+b-1}. What went wrong?`,type:'mc',options:shuffle([`${a} was counted again`,'Nothing, it is right',`It should be taking away`]),answer:`${a} was counted again`,hint:`When you count on from ${a}, the first number you say is ${a+1}.`}},
  chal(){const k=R(0,2);if(k===0){const a=R(1,19);return{obj:'2Ni.03',kind:'Challenge: pairs that make 20',text:`${a} + ? = 20`,type:'num',answer:20-a,hint:'Make 10 first, then add another 10.'}}
-  if(k===1){const t=R(1,9);return{obj:'2Ni.03',kind:'Challenge: tens that make 100',text:`${t*10} + ? = 100`,type:'num',answer:100-t*10,hint:`Think in tens: ${t} tens and how many tens make 10 tens?`}}
-  const [a,b]=noRegAdd(true);return{obj:'2Ni.04',kind:'Challenge: adding 2-digit numbers',text:`${a} + ${b} = ?`,type:'num',answer:a+b,hint:`Ones: ${a%10} + ${b%10}. Tens: ${Math.floor(a/10)} + ${Math.floor(b/10)}.`}}},
+  if(k===1){const t=R(1,9);return{obj:'2Ni.03',kind:'Challenge: tens that make 100',text:`${t*10} + ? = 100`,type:'num',answer:100-t*10,hint:`Count in tens from ${t*10} up to 100.`}}
+  const [a,b]=noRegAdd(true);return{obj:'2Ni.04',kind:'Challenge: adding 2-digit numbers',text:`${a} + ${b} = ?`,type:'num',answer:a+b,hint:`Add the ones first: ${a%10} + ${b%10}. Then add the tens.`}}},
 
 {id:'sub',strand:0,emoji:'➖',title:'Taking Away',tag:'Count back, take away, and find the difference',objs:['1Ni.03','1Ni.05'],
  intro:`<p>Taking away (subtracting) means finding how many are <b>left</b>.</p><p>We can <b>take away</b> objects and count what is left. Or we can <b>count back</b>: for 12 − 3, start at 12 and say 11, 10, 9.</p><p>The <b>difference</b> is how many more one number is than another. Line them up, or count on from the smaller number.</p>`,
@@ -659,10 +750,10 @@ const TOPICS=[
   if(k==='diff'){const e=pick(ITEMS),b=R(2,8),a=b+R(1,6);return{obj:'1Ni.03',kind:'Finding the difference',text:`What is the difference between ${a} and ${b}?`,visual:`<div class="purses"><div class="purse">${objs(a,e)}</div><div class="purse">${objs(b,e)}</div></div>`,type:'num',answer:a-b,hint:'Match them up. How many have no partner?'}}
   if(k==='w20'){const a=R(5,20),b=R(1,Math.min(9,a));return{obj:'1Ni.05',kind:'Taking away within 20',text:`${a} − ${b} = ?`,type:'num',answer:a-b,hint:`Start at ${a} and count back ${b}.`}}
   if(k==='miss'){const a=R(6,15),c=R(1,a-1);return{obj:'1Ni.05',kind:'Missing number in taking away',text:`${a} − ? = ${c}`,type:'num',answer:a-c,hint:`Count on from ${c} up to ${a}.`}}
-  if(k==='word'){const a=R(6,20),b=R(1,Math.min(8,a-1));return{obj:'1Ni.05',kind:'Taking away word problems',text:`${pick(KIDS)} had ${a} balloons. ${b} flew away. How many are left?`,type:'num',answer:a-b,hint:`"Left" means take away: ${a} − ${b}.`}}
+  if(k==='word'){const a=R(6,20),b=R(1,Math.min(8,a-1));return{obj:'1Ni.05',kind:'Taking away word problems',text:`${pick(KIDS)} had ${a} balloons. ${b} flew away. How many are left?`,type:'num',answer:a-b,hint:`"Left" means take away. Work out ${a} − ${b}.`}}
   const a=R(10,16),b=R(2,5);return{obj:'1Ni.03',kind:'Thinking: is it right?',text:`${pick(KIDS)} counts back ${b} from ${a} and says: "${[...Array(b)].map((_,i)=>a-i).join(', ')}". So the answer is ${a-b+1}. Is that right?`,type:'mc',options:YN,answer:'No',hint:`The first jump back from ${a} lands on ${a-1}. Do not count ${a} itself.`}},
- chal(){const k=R(0,1);if(k===0){const [a,b]=noRegSub(true);return{obj:'2Ni.04',kind:'Challenge: taking away 2-digit numbers',text:`${a} − ${b} = ?`,type:'num',answer:a-b,hint:`Ones: ${a%10} − ${b%10}. Tens: ${Math.floor(a/10)} − ${Math.floor(b/10)}.`}}
-  const a=R(3,9),b=R(1,a-1);return{obj:'2Ni.04',kind:'Challenge: taking away tens',text:`${a*10} − ${b*10} = ?`,type:'num',answer:(a-b)*10,hint:`${a} tens take away ${b} tens.`}}},
+ chal(){const k=R(0,1);if(k===0){const [a,b]=noRegSub(true);return{obj:'2Ni.04',kind:'Challenge: taking away 2-digit numbers',text:`${a} − ${b} = ?`,type:'num',answer:a-b,hint:`Take the ones away first: ${a%10} − ${b%10}. Then the tens.`}}
+  const a=R(3,9),b=R(1,a-1);return{obj:'2Ni.04',kind:'Challenge: taking away tens',text:`${a*10} − ${b*10} = ?`,type:'num',answer:(a-b)*10,hint:`${a} tens take away ${b} tens. How many tens are left?`}}},
 
 {id:'frac',strand:0,emoji:'🍕',title:'Halves',tag:'Equal parts, half of an amount, and halves making wholes',objs:['1Nf.01','1Nf.02','1Nf.03','1Nf.04'],
  intro:`<p>When we cut something into <b>2 equal parts</b>, each part is a <b>half</b>.</p><p>The two parts must be the <b>same size</b>. If one part is bigger, they are not halves.</p><p>We can find half of a <b>group</b> by sharing it into 2 equal groups. Half of 8 is 4.</p><p><b>Two halves make a whole.</b></p>`,
@@ -673,7 +764,7 @@ const TOPICS=[
   if(k==='set'){const n=R(1,6)*2,e=pick(ITEMS),sh=Math.random()<.6?n/2:pick([n/2+1,Math.max(1,n/2-1)]);return{obj:'1Nf.02',kind:'Half of a group of objects',text:`There are ${n} ${NAMES[e]}. ${pick(KIDS)} takes ${sh}. Is that half?`,visual:objs(n,e,sh),type:'mc',options:YN,answer:sh*2===n?'Yes':'No',hint:'Half means 2 equal groups. Are the crossed-out ones and the others the same number?'}}
   if(k==='of'){const n=R(1,10)*2,e=pick(ITEMS);return{obj:'1Nf.03',kind:'Half of a number',text:`What is half of ${n}?`,visual:n<=12?objs(n,e):'',type:'num',answer:n/2,hint:`Share ${n} into 2 equal groups, one for you and one for me.`}}
   if(k==='whole'){const q=pick([{t:'How many halves make one whole?',a:2,v:`<div class="plus">${fracCircle(2,1)}<b>+</b>${fracCircle(2,1)}</div>`},{t:'4 halves make how many wholes?',a:2,v:`<div class="plus">${fracCircle(2,1)}${fracCircle(2,1)}${fracCircle(2,1)}${fracCircle(2,1)}</div>`},{t:'Half a pizza and another half a pizza. How many whole pizzas?',a:1,v:`<div class="plus">${fracCircle(2,1)}<b>+</b>${fracCircle(2,1)}</div>`},{t:'6 halves make how many wholes?',a:3,v:''}]);return{obj:'1Nf.04',kind:'Halves make wholes',text:q.t,visual:q.v,type:'num',answer:q.a,hint:'Two halves fit together to make one whole.'}}
-  const s=pick([['Any 2 pieces of a cake are halves.','No'],['2 halves make a whole.','Yes'],['Half of 10 is 5.','Yes'],['Half of 6 is 4.','No']]);return{obj:'1Nf.01',kind:'Thinking: is it true?',text:`Is this true? ${s[0]}`,type:'mc',options:YN,answer:s[1],hint:'Picture it, or try it with real things.'}},
+  const s=pick([['Any 2 pieces of a cake are halves.','No'],['2 halves make a whole.','Yes'],['Half of 10 is 5.','Yes'],['Half of 6 is 4.','No']]);return{obj:'1Nf.01',kind:'Thinking: is it true?',text:`Is this true? ${s[0]}`,type:'mc',options:YN,answer:s[1],hint:'Try it with real things at home.'}},
  chal(){const k=R(0,1);if(k===0){const f=pick([[4,1,'1/4'],[2,1,'1/2'],[4,3,'3/4']]);return{obj:'2Nf.02',kind:'Challenge: quarters',text:'What fraction is coloured?',visual:fracCircle(f[0],f[1]),type:'mc',options:shuffle(['1/2','1/4','3/4']),answer:f[2],big:true,hint:`There are ${f[0]} equal parts. How many are coloured?`}}
   const n=4*R(1,5);return{obj:'2Nf.04',kind:'Challenge: a quarter of a number',text:`What is one quarter of ${n}?`,type:'num',answer:n/4,hint:`Share ${n} into 4 equal groups.`}}},
 
@@ -703,7 +794,7 @@ const TOPICS=[
    if(f[5]==='num')return{obj:'1Gg.03',kind:'Counting faces',text:`${f[2]} ${f[0]} have?`,visual:`<div class="big3d">${f[1]}</div>`,type:'num',answer:f[4],hint:'Faces are the flat surfaces. Top, bottom, and all the way round.'};
    return{obj:'1Gg.03',kind:'Flat or curved faces',text:`Does ${f[0]} have a curved face?`,visual:`<div class="big3d">${f[1]}</div>`,type:'mc',options:YN,answer:f[6],hint:'Could it roll? Shapes with a curved face can roll.'}}
   if(k==='turn'){const n=pick(['circle','square','square','rectangle','triangle']);const same=n==='circle'||n==='square';return{obj:'1Gg.07',kind:'Does it look the same when it turns',text:`This ${n} makes a quarter turn. Does it look exactly the same as before?`,visual:`<div class="plus">${shapeRot(n,0)}<b>↻</b>${shapeRot(n,90).replace('<svg ','<svg style="overflow:visible" ')}</div>`,type:'mc',options:YN,answer:same?'Yes':'No',hint:'Look at both pictures. Would the turned shape fit exactly on the first one?'}}
-  const s=pick([['A circle has corners.','No'],['A triangle has 3 sides.','Yes'],['A ball is a flat shape.','No'],['A square has 4 sides.','Yes'],['A cube has curved faces.','No']]);return{obj:'1Gg.01',kind:'Thinking: is it true?',text:`Is this true? ${s[0]}`,type:'mc',options:YN,answer:s[1],hint:'Picture the shape, or find one at home.'}},
+  const s=pick([['A circle has corners.','No'],['A triangle has 3 sides.','Yes'],['A ball is a flat shape.','No'],['A square has 4 sides.','Yes'],['A cube has curved faces.','No']]);return{obj:'1Gg.01',kind:'Thinking: is it true?',text:`Is this true? ${s[0]}`,type:'mc',options:YN,answer:s[1],hint:'Find one at home and look at it.'}},
  chal(){const k=R(0,1);if(k===0){const n=pick(['triangle','square','rectangle','pentagon','hexagon']);return{obj:'2Gg.01',kind:'Challenge: counting vertices',text:'How many vertices (corners) does this shape have?',visual:shapeRot(n,pick([0,30])),type:'num',answer:SH2[n].sides,hint:'Put a finger on each corner and count.'}}
   const f=pick([['a cube','edges',12],['a cube','vertices',8],['a cuboid','vertices',8]]);return{obj:'2Gg.05',kind:'Challenge: edges and vertices',text:`How many ${f[1]} does ${f[0]} have?`,visual:'<div class="big3d">📦</div>',type:'num',answer:f[2],hint:'Edges are where two faces meet. Vertices are corners.'}}},
 
@@ -746,7 +837,7 @@ const TOPICS=[
   if(k==='months'){const i=R(0,11),after=Math.random()<.6,ans=MONTHS[after?(i+1)%12:(i+11)%12];return{obj:'1Gt.02',kind:'Months of the year',text:`Which month comes ${after?'after':'before'} ${MONTHS[i]}?`,type:'mc',options:fillOpts(ans,MONTHS.filter(x=>x!==MONTHS[i])),answer:ans,hint:'Say the months in order, starting with January.'}}
   if(k==='words'){const q=pick([['If today is Monday, what day was yesterday?','Sunday',DAYS,'1Gt.02'],['If today is Friday, what day is tomorrow?','Saturday',DAYS,'1Gt.02'],['If today is Wednesday, what day is tomorrow?','Thursday',DAYS,'1Gt.02'],['When do we usually eat breakfast?','In the morning',['In the morning','At night','In the evening'],'1Gt.01'],['When is it dark and time to sleep?','At night',['At night','In the morning','At lunch time'],'1Gt.01'],['How many days are in a week?','7',['7','5','12'],'1Gt.02'],['How many months are in a year?','12',['12','7','30'],'1Gt.02']]);return{obj:q[3],kind:'Time words',text:q[0],type:'mc',options:fillOpts(q[1],q[2].filter(x=>x!==q[1])),answer:q[1],hint:'Think about your own week and your own day.'}}
   if(k==='longer'){const q=pick([['brushing your teeth','sleeping at night'],['blinking your eyes','eating lunch'],['a clap','a whole school day'],['washing your hands','a week of holiday']]);const ask=Math.random()<.5;return{obj:'1Gt.01',kind:'Which takes longer',text:`Which takes ${ask?'longer':'less time'}?`,type:'mc',options:shuffle([cap(q[0]),cap(q[1])]),answer:cap(ask?q[1]:q[0]),hint:'Imagine doing each one. Which would you be doing for more time?'}}
-  const s=pick([['The short hand shows the hour.','Yes'],["When the long hand points to 6, it is o'clock.",'No'],['Saturday comes after Friday.','Yes'],['There are 10 days in a week.','No']]);return{obj:s[0].includes('hand')?'1Gt.03':'1Gt.02',kind:'Thinking: is it true?',text:`Is this true? ${s[0]}`,type:'mc',options:YN,answer:s[1],hint:'Think about a real clock and a real week.'}},
+  const s=pick([['The short hand shows the hour.','Yes'],["When the long hand points to 6, it is o'clock.",'No'],['Saturday comes after Friday.','Yes'],['There are 10 days in a week.','No']]);return{obj:s[0].includes('hand')?'1Gt.03':'1Gt.02',kind:'Thinking: is it true?',text:`Is this true? ${s[0]}`,type:'mc',options:YN,answer:s[1],hint:'Look at a real clock or a calendar at home.'}},
  chal(){const k=R(0,1);if(k===0){const h=R(1,12),m=pick([15,45]);const ans=timeWords(h,m);return{obj:'2Gt.02',kind:'Challenge: quarter past and quarter to',text:'What time does the clock show?',visual:clockSVG(h,m),type:'mc',options:fillOpts(ans,[timeWords(h,m===15?45:15),timeWords(h,30),timeWords(h%12+1,m)]),answer:ans,hint:'Long hand on 3 is quarter past. On 9 it is quarter to the next hour.'}}
   const mi=R(0,11),start=R(0,6),days=MDAYS[mi],d=R(2,20);return{obj:'2Gt.03',kind:'Challenge: reading a calendar',text:`What day of the week is the ${d}${d===2?'nd':d===3?'rd':'th'}?`,visual:calHTML(MONTHS[mi],start,days),type:'mc',options:fillOpts(DAYS[(start+d-1)%7],DAYS),answer:DAYS[(start+d-1)%7],hint:'Find the date, then look up to the top of its column.'}}},
 
@@ -767,7 +858,7 @@ const TOPICS=[
   if(k==='sort'){const fr=R(1,5),set=shuffle([...shuffle(['🍎','🍌','🍇','🍓','🍐']).slice(0,fr),...shuffle(['🚗','🚌','🚲','🚂','✈️']).slice(0,6-fr)]);return{obj:'1Ss.02',kind:'Sorting into groups',text:'Sort these into fruit and vehicles. How many are fruit?',visual:`<div class="patrow">${set.map(x=>`<span>${x}</span>`).join('')}</div>`,type:'num',answer:fr,hint:'Touch each fruit and count them.'}}
   if(k==='ask'){const q=pick([['We want to know which fruit most children like. What should we do?','Ask each child and count the answers',['Ask each child and count the answers','Guess','Look at a clock']],['We want to know how many children walk to school. What should we do?','Ask the children and keep a list',['Ask the children and keep a list','Count the windows','Measure the door']]]);return{obj:'1Ss.01',kind:'How to find the answer to a question',text:q[0],type:'mc',options:shuffle(q[2]),answer:q[1],hint:'To find out what people think, we need to ask them.'}}
   const s=pick(ODD.slice(0,4).concat(ODD.slice(6)));return{obj:'1Ss.02',kind:'Odd one out',text:'Which one does not belong in this group?',type:'mc',options:shuffle(s[0]),answer:s[1],big:true,hint:'What do the others have in common?'}},
- chal(){if(Math.random()<.5){const n=R(3,19);return{obj:'2Ss.02',kind:'Challenge: reading a tally',text:'What number does this tally show?',visual:tallySVG(n),type:'num',answer:n,hint:'Each crossed group is 5.'}}
+ chal(){if(Math.random()<.5){const n=R(3,19);return{obj:'2Ss.02',kind:'Challenge: reading a tally',text:'What number does this tally show?',visual:tallySVG(n),type:'num',answer:n,hint:'Each crossed group is 5. Count 5, 10, 15… then the single lines.'}}
   const src=shuffle(COLOURS).slice(0,4);let vals;do{vals=src.map(()=>R(1,8))}while(new Set(vals).size<4);return{obj:'2Ss.03',kind:'Challenge: total in a graph',text:'Children chose their favourite colour. How many children chose altogether?',visual:blockGraph(src.map((c,i)=>({label:c[0],val:vals[i],color:c[1]}))),type:'num',answer:msum(vals),hint:'Add all the columns together.'}}}
 ];
 TOPICS.forEach((t,i)=>{t.num=i+1;const c=STRANDS[t.strand].c;t.style=`--c:var(--${c});--cs:var(--${c}-soft)`});
@@ -874,6 +965,490 @@ function feelMsg(f,lvl){const n=nm();
  if(f==='ok')return lvl>=2?`Nice work, ${n}! One more round will make it even stronger.`:`Good! Read the lesson again, then have another go.`;
  return lvl>=2?`It felt tricky, but you did really well, ${n}! You know more than you think.`:`That's OK, ${n}. Tricky means your brain is growing. Read the lesson with a grown-up, then try again.`}
 
+
+/* ================= visual hints ================= */
+/* Pictures that help a child work the answer out. They never show the answer. */
+const NQ=q=>{const t=(String(q.text).match(/\d+/g)||[]).map(Number);if(t.length>1)return t;
+ const v=(String(q.visual||'').replace(/<[^>]*>/g,' ').match(/\d+/g)||[]).map(Number);return v.length>t.length?v:t};
+const vhStepOf=n=>{let d=[];for(let i=1;i<n.length;i++)if(n[i]-n[i-1]>0)d.push(n[i]-n[i-1]);return d.length?Math.min(...d):1};
+const vhCap=t=>`<p class="vhcap">${t}</p>`;
+function vhJumps(seq,step,back){const u=66,W=seq.length*u+24;let s=`<svg viewBox="0 0 ${W} 88" class="vhsvg" style="max-width:${Math.min(W,340)}px">`;
+ seq.forEach((v,i)=>{const x=22+i*u;s+=`<rect x="${x-24}" y="46" width="48" height="34" rx="8" fill="var(--card)" stroke="var(--ink)" stroke-width="2"/><text x="${x}" y="70" text-anchor="middle" font-size="19" font-weight="800" fill="var(--ink)" font-family="Baloo 2,sans-serif">${v}</text>`;
+  if(i<seq.length-1){const x2=x+u;s+=`<path d="M${x+20},42 Q${(x+x2)/2},6 ${x2-20},42" fill="none" stroke="var(--c)" stroke-width="3"/><text x="${(x+x2)/2}" y="22" text-anchor="middle" font-size="15" font-weight="800" fill="var(--c)" font-family="Baloo 2,sans-serif">${back?'−':'+'}${step}</text>`}});
+ return s+'</svg>'}
+function vhPV(nums,cols){return `<table class="pv"><tr>${cols.map(c=>`<th>${c}</th>`).join('')}</tr>${nums.map(n=>{const d=String(n).padStart(cols.length,'0').split('');return `<tr>${d.map(x=>`<td>${x}</td>`).join('')}</tr>`}).join('')}</table>`}
+function vhFrames(a,b){const t=a+b,n=Math.min(t,20);let h='<div class="tf">',i=0;while(i<n){const k=Math.min(10,n-i);h+='<span class="frame">';for(let j=0;j<k;j++){h+=`<i>${i+j<a?'🔴':'🔵'}</i>`}h+='<i></i>'.repeat(10-k)+'</span>';i+=k}return h+'</div>'}
+function vhEmptyFrames(a,total){let h='<div class="tf">';for(let i=0;i<total;i+=10){const k=Math.min(10,total-i);h+='<span class="frame">';for(let j=0;j<k;j++)h+=`<i>${i+j<a?'🔴':''}</i>`;h+='</span>'}return h+'</div>'}
+function vhPairs(n){let h='<div class="pairs">';for(let i=0;i<n;i++)h+=`<i class="${i===n-1&&n%2?'odd':''}"></i>`;return h+'</div>'}
+function vhSkip(step,upto){return trackHTML(0,upto,v=>v%step===0)+vhCap(`The coloured numbers are the ${step}s. Count along them.`)}
+function vhCountUp(from,to){const n=Math.min(to-from,10);return `<div class="track">${[...Array(n+1)].map((_,i)=>`<span class="${i===0?'on':''}">${from+i}</span>`).join('')}</div>`+vhCap(`Start at ${from} and count up. Count how many steps you take.`)}
+function vhTensBar(t){let h='<div class="tensbar">';for(let i=0;i<10;i++)h+=`<span class="${i<t?'on':''}">10</span>`;return h+'</div>'}
+function vhSplit(a,b,op){return `<table class="pv split"><tr><th></th><th>Tens</th><th>Ones</th></tr><tr><td>${a}</td><td>${Math.floor(a/10)*10}</td><td>${a%10}</td></tr><tr><td>${op} ${b}</td><td>${Math.floor(b/10)*10}</td><td>${b%10}</td></tr></table>`+vhCap('Do the ones first, then the tens.')}
+function vhHalfWall(){const row=(parts,lab)=>`<div class="fwrow">${[...Array(parts)].map(()=>`<span>${lab}</span>`).join('')}</div>`;
+ return `<div class="fwall">${row(1,'1 whole')}${row(2,'half')}</div>`+vhCap('Two halves fit together to make one whole.')}
+function vhMoneyCard(){return moneyHTML([1,2,5,10])+vhCap('The number on it tells you what it is worth, not its size.')}
+function vhClockGuide(){let s='<svg viewBox="0 0 240 240" class="clock" style="max-width:230px"><circle cx="120" cy="120" r="92" fill="var(--card)" stroke="var(--ink)" stroke-width="5"/>';
+ for(let i=0;i<12;i++){const a=-Math.PI/2+i*Math.PI/6,x=120+68*Math.cos(a),y=120+68*Math.sin(a);
+  s+=`<text x="${x}" y="${y+7}" text-anchor="middle" font-size="20" font-weight="800" fill="var(--ink)" font-family="Baloo 2,sans-serif">${i===0?12:i}</text>`}
+ s+='<line x1="120" y1="120" x2="120" y2="62" stroke="#7A4FD0" stroke-width="6" stroke-linecap="round"/><line x1="120" y1="120" x2="168" y2="120" stroke="#F2711C" stroke-width="9" stroke-linecap="round"/><circle cx="120" cy="120" r="7" fill="var(--ink)"/></svg>';
+ return s+vhCap("Short orange hand = the hour. Long purple hand = the minutes. On 12 it is o'clock, on 6 it is half past.")}
+function vhDays(){return `<div class="ladder">${DAYS.map(d=>`<span>${d.slice(0,3)}</span>`).join('')}</div>`}
+function vhMonths(){return `<div class="ladder wrap">${MONTHS.map(m=>`<span>${m.slice(0,3)}</span>`).join('')}</div>`}
+function vhShapeChart(){const L=[['circle',0],['triangle',3],['square',4],['rectangle',4],['pentagon',5],['hexagon',6]];
+ return `<div class="shchart">${L.map(s=>`<span>${shapeSVG(s[0])}<b>${s[1]?s[1]+' sides':'round'}</b></span>`).join('')}</div>`}
+function vhSolid(){return `<svg viewBox="0 0 330 200" class="shp" style="max-width:320px"><g fill="var(--shape)" stroke="var(--ink)" stroke-width="3" stroke-linejoin="round"><polygon points="40,60 120,60 120,140 40,140"/><polygon points="40,60 70,30 150,30 120,60"/><polygon points="120,60 150,30 150,110 120,140"/></g><circle cx="40" cy="140" r="7" fill="#E5484D"/><line x1="40" y1="140" x2="120" y2="140" stroke="#1E8F52" stroke-width="5"/><text x="172" y="86" font-size="15" font-weight="800" fill="#E5484D" font-family="Baloo 2,sans-serif">● vertex</text><text x="172" y="112" font-size="15" font-weight="800" fill="#1E8F52" font-family="Baloo 2,sans-serif">— edge</text><text x="172" y="138" font-size="15" font-weight="800" fill="var(--ink)" font-family="Baloo 2,sans-serif">▭ face</text><text x="60" y="105" font-size="14" font-weight="800" fill="var(--ink)" font-family="Baloo 2,sans-serif">face</text></svg>`+vhCap('Faces are the flat sides. Count the ones you cannot see too.')}
+function vhTurns(){return `<div class="turnrow">${[['⬆️','start'],['➡️','quarter'],['⬇️','half'],['⬅️','three quarters']].map(a=>`<span><b>${a[0]}</b>${a[1]}</span>`).join('')}</div>`+vhCap('Turning clockwise: up, right, down, left. A whole turn comes back to the start.')}
+function vhGridGuide(){return `<div class="pgrid">${['↖️','⬆️','↗️','⬅️','⭐','➡️','↙️','⬇️','↘️'].map(x=>`<span>${x}</span>`).join('')}</div>`+vhCap('Find the star first. Left is towards the ⬅️, above is towards the ⬆️.')}
+function vhTallyGuide(){return tallySVG(12)+vhCap('Count each crossed group as 5: 5, 10… then count the single lines.')}
+function vhGraphGuide(){return blockGraph([{label:'🍎',val:4,color:'#E5484D'},{label:'🍌',val:6,color:'#F2B01E'}])+vhCap('Count the blocks in one column at a time. For "how many more", find both numbers and take the smaller away.')}
+function vhCarroll(){return carrollHTML(['Even','Odd'],['Less than 10','10 or more'])+vhCap('Ask two questions: is it even or odd, and is it less than 10?')}
+function vhSortGuide(){return vennSVG()+vhCap('If both things are true, it goes in the middle. If neither is true, it goes outside.')}
+function vhRepeat(){return patternHTML(['🔴','🔵','🟡','🔴','🔵','🟡','🔴'])+vhCap('Find the part that repeats, then say it again.')}
+function vhRuler(){return rulerSVG(6)+vhCap('Start at 0, not at 1. Read the number at the end of the object.')}
+function vhScale(){return scaleSVG(7,10,1,'')+vhCap('Find the arrow, then read the number it points to.')}
+function vhMatch(){const a=5,b=3,u=42;let s=`<svg viewBox="0 0 ${a*u+24} 112" class="vhsvg" style="max-width:250px">`;
+ for(let i=0;i<a;i++)s+=`<circle cx="${22+i*u}" cy="26" r="15" fill="var(--c)" stroke="var(--ink)" stroke-width="2"/>`;
+ for(let i=0;i<b;i++)s+=`<circle cx="${22+i*u}" cy="86" r="15" fill="#F2B01E" stroke="var(--ink)" stroke-width="2"/>`;
+ for(let i=0;i<b;i++)s+=`<line x1="${22+i*u}" y1="44" x2="${22+i*u}" y2="68" stroke="var(--muted)" stroke-width="2" stroke-dasharray="4 3"/>`;
+ for(let i=b;i<a;i++)s+=`<text x="${22+i*u}" y="94" text-anchor="middle" font-size="20" font-weight="800" fill="var(--warn)" font-family="Baloo 2,sans-serif">?</text>`;
+ return s+'</svg>'+vhCap('Match them one to one. The row with some left over has more.')}
+function vhTools(){return `<div class="turnrow"><span><b>📏</b>how long</span><span><b>⚖️</b>how heavy</span><span><b>🫗</b>how much it holds</span><span><b>🌡️</b>how hot</span></div>`}
+
+function vhShare(n,g,e){e=e||'🍓';return `<div class="vhrow">${objs(Math.min(n,20),e)}</div><div class="groups">${[...Array(g)].map(()=>'<span class="grp"></span>').join('')}</div>`+vhCap(`Deal them into the ${g} groups, one at a time, until none are left. Then count one group.`)}
+/* which picture goes with which question */
+const VH={
+count:{'Counting objects to 20':q=>tenFrames(13,'🔵')+vhCap('Count in groups: a full box is 10, then count the extra ones.'),
+ 'Same number when moved':q=>`<div class="vhrow">${objs(6,'🔴')}${dotsSVG(6)}</div>`+vhCap('Both pictures have the same number. Moving things does not change how many.'),
+ 'Quick look (familiar patterns)':q=>`<div class="vhrow">${diceSVG(5)}${tenFrames(7,'🔴')}</div>`+vhCap('A dice pattern or a full row of 5 is quick to see. Then count the extra ones.'),
+ 'Estimating how many (to 20)':q=>dotsSVG(10)+vhCap('This is 10 dots. Is your picture about the same, fewer or more?'),
+ 'Counting on in 1s':q=>{const n=NQ(q);const st=vhStepOf(n)||1;return vhJumps([n[0],n[0]+st,'?'],st)},
+ 'Counting on in 2s':q=>{const n=NQ(q);return vhJumps([n[0],n[0]+2,'?'],2)+vhCap('Count in 2s: 0, 2, 4, 6…')},
+ 'Counting back in 1s':q=>{const n=NQ(q);return vhJumps([n[0],n[0]-1,'?'],1,true)},
+ 'Counting on in 10s':q=>{const n=NQ(q);return trackHTML(0,20,v=>v===n[0])+vhCap('Put your finger on the coloured number and jump 10 along the track.')},
+ 'Counting back in 10s':q=>{const n=NQ(q);return trackHTML(0,20,v=>v===n[0])+vhCap('Put your finger on the coloured number and jump 10 back along the track.')},
+ 'Odd or even (every other number)':q=>{const n=NQ(q)[0]||7;return vhPairs(n%10||10)+vhCap('Put them in pairs. If one is left over, the number is odd.')},
+ 'What comes next in a pattern':q=>vhRepeat(),
+ 'Thinking: spot the mistake':q=>trackHTML(1,14)+vhCap('Say the numbers along the track and listen for the one that is missing.'),
+ 'Challenge: counting in 5s':q=>vhSkip(5,30),
+ 'Challenge: counting past 20':q=>tenFrames(34,'🔵')+vhCap('Each full box is 10. Count 10, 20, 30… then the loose ones.'),
+ 'Challenge: counting back in 2s':q=>{const n=NQ(q);return vhJumps([n[0],n[0]-2,'?'],2,true)}},
+place:{'Number names':q=>vhPV([NQ(q)[0]||14],['Tens','Ones'])+vhCap('Teen words end in "teen" and start with the ones number.'),
+ 'Writing number names':q=>vhPV([NQ(q)[0]||14],['Tens','Ones']),
+ 'Zero means none':q=>'<div class="big3d">🍽️</div>'+vhCap('An empty plate has 0 on it. Zero means none.'),
+ 'Ten and some ones':q=>tensOnes(1,4)+vhCap('One stick is 10. Count the single cubes after it.'),
+ 'Splitting a number':q=>tenFrames(15,'🔵')+vhCap('Fill the first box to 10, then count the ones left over.'),
+ 'Regrouping a teen number':q=>`<div class="vhrow">${tensOnes(1,4)}<b>=</b>${tensOnes(0,14)}</div>`+vhCap('One stick of ten can be swapped for 10 single cubes. The number stays the same.'),
+ 'Thinking: is it right?':q=>vhPV([NQ(q)[0]||14],['Tens','Ones'])+vhCap('The tens go first, then the ones.'),
+ 'Challenge: tens and ones to 100':q=>tensOnes(3,4)+vhCap('Count the sticks in 10s, then count on the single cubes.'),
+ 'Challenge: number names to 100':q=>vhPV([NQ(q)[0]||46],['Tens','Ones'])},
+compare:{'Which group has more':q=>vhMatch(),
+ 'Which group has fewer':q=>vhMatch(),
+ 'Bigger number':q=>{const n=NQ(q);return trackHTML(0,20,v=>n.includes(v))+vhCap('The number further along the track is bigger.')},
+ 'Smaller number':q=>{const n=NQ(q);return trackHTML(0,20,v=>n.includes(v))+vhCap('The number nearer the start of the track is smaller.')},
+ 'Biggest number':q=>{const n=NQ(q);return trackHTML(0,20,v=>n.includes(v))+vhCap('The number furthest along the track is the biggest.')},
+ 'Smallest number':q=>{const n=NQ(q);return trackHTML(0,20,v=>n.includes(v))+vhCap('The number nearest the start of the track is the smallest.')},
+ 'Ordering numbers':q=>{const n=NQ(q);return trackHTML(0,20,v=>n.includes(v))+vhCap('Read the coloured numbers from left to right.')},
+ 'Number in between':q=>{const n=NQ(q)[0]||9;return trackHTML(Math.max(0,n-1),Math.min(20,n+3),v=>v===n)+vhCap('Count on from the coloured number.')},
+ 'Ordinal numbers (1st to 10th)':q=>`<div class="ordrow">${['1st','2nd','3rd','4th','5th'].map(o=>`<span>🐾<b>${o}</b></span>`).join('')}</div>`+vhCap('Start at the flag end and count along: 1st, 2nd, 3rd…'),
+ 'Thinking: is it right?':q=>{const n=NQ(q);return trackHTML(0,20,v=>n.includes(v))+vhCap('The number further along the track is bigger.')},
+ 'Challenge: comparing 2-digit numbers':q=>vhPV(NQ(q).slice(0,2),['Tens','Ones'])+vhCap('Compare the tens column first.'),
+ 'Challenge: ordering 2-digit numbers':q=>vhPV(NQ(q).slice(0,3),['Tens','Ones'])+vhCap('Compare the tens column first.')},
+add:{'Putting two groups together':q=>{const n=NQ(q);return vhFrames(Math.min(n[0]||3,10),Math.min(n[1]||4,10))+vhCap('Put them all in the frame, then count them.')},
+ 'Adding by counting on':q=>{const n=NQ(q);return trackHTML(0,20,v=>v===n[0])+vhCap(`Put your finger on the coloured number, then make ${n[1]||2} jumps along.`)},
+ 'Pairs that make 10':q=>{const n=NQ(q);return vhEmptyFrames(Math.min(n[0]||6,10),10)+vhCap('Count the empty squares.')},
+ 'Adding within 20':q=>{const n=NQ(q);return vhFrames(n[0],n[1])+vhCap('Fill the first frame to 10, then see how many are left over.')},
+ 'Doubles to double 10':q=>{const n=NQ(q)[0]||4;return `<div class="vhrow">${objs(Math.min(n,10),'🔵')}<b>+</b>${objs(Math.min(n,10),'🔵')}</div>`+vhCap('A double is the same number twice. Count them all.')},
+ 'Estimating a sum':q=>vhEmptyFrames(10,10)+vhCap('A full frame is 10. Will your two numbers fill more than one frame?'),
+ 'Adding word problems':q=>{const n=NQ(q);return `<div class="vhrow">${objs(Math.min(n[0]||4,12),'⭐')}<b>+</b>${objs(Math.min(n[1]||3,12),'⭐')}</div>`},
+ 'Thinking: spot the mistake':q=>{const n=NQ(q);return trackHTML(0,20,v=>v===n[0])+vhCap('Counting on from the coloured number, the first number you say is the next one along.')},
+ 'Challenge: pairs that make 20':q=>vhEmptyFrames(NQ(q)[0]||8,20)+vhCap('Count the empty squares in both frames.'),
+ 'Challenge: tens that make 100':q=>vhTensBar(Math.round((NQ(q)[0]||30)/10))+vhCap('Each block is 10. Count the empty blocks.'),
+ 'Challenge: adding 2-digit numbers':q=>{const n=NQ(q);return vhSplit(n[0],n[1],'+')}},
+sub:{'Taking away objects':q=>objs(9,'🍪',3)+vhCap('The crossed ones are gone. Count only the ones left.'),
+ 'Taking away by counting back':q=>{const n=NQ(q);return trackHTML(0,20,v=>v===n[0])+vhCap(`Put your finger on the coloured number, then make ${n[1]||2} jumps back.`)},
+ 'Finding the difference':q=>{const n=NQ(q).slice(0,2).sort((a,b)=>a-b);return vhCountUp(n[0],n[1])},
+ 'Taking away within 20':q=>{const n=NQ(q);return vhJumps([n[0],'?'],n[1],true)+vhCap(`Start at ${n[0]} and jump back ${n[1]}.`)},
+ 'Missing number in taking away':q=>{const n=NQ(q).slice(0,2).sort((a,b)=>a-b);return vhCountUp(n[0],n[1])},
+ 'Taking away word problems':q=>{const n=NQ(q);return objs(Math.min(n[0]||9,20),'🎈',Math.min(n[1]||3,20))+vhCap('Cross out the ones that go. Count what is left.')},
+ 'Thinking: is it right?':q=>{const n=NQ(q);return trackHTML(0,20,v=>v===n[0])+vhCap('The first jump back lands on the next number down, not on the number you started on.')},
+ 'Challenge: taking away 2-digit numbers':q=>{const n=NQ(q);return vhSplit(n[0],n[1],'−')},
+ 'Challenge: taking away tens':q=>vhTensBar(Math.round((NQ(q)[0]||50)/10))+vhCap('Each block is 10. Take away whole blocks.')},
+frac:{'Two equal parts or not':q=>`<div class="vhrow">${fracRect(2,1)}${fracRect(2,1,true)}</div>`+vhCap('Halves are 2 parts that are exactly the same size.'),
+ 'Is half coloured':q=>`<div class="vhrow">${fracCircle(2,1)}${fracRect(2,1)}</div>`+vhCap('Half means one of 2 equal parts is coloured.'),
+ 'Half of a group of objects':q=>groupsHTML(2,4,'🍓')+vhCap('Share them into 2 equal groups. Half is one of those groups.'),
+ 'Half of a number':q=>{const n=NQ(q)[0]||10;return groupsHTML(2,Math.min(Math.floor(n/2),8),'🍓')+vhCap('Share them into 2 equal groups, one for you and one for me.')},
+ 'Halves make wholes':q=>vhHalfWall(),
+ 'Thinking: is it true?':q=>`<div class="vhrow">${fracRect(2,1)}${fracRect(2,1,true)}</div>`+vhCap('Parts are only halves when they are the same size.'),
+ 'Challenge: quarters':q=>`<div class="vhrow">${fracCircle(4,1)}${fracCircle(2,1)}</div>`+vhCap('Quarters are 4 equal parts. Halves are 2.'),
+ 'Challenge: a quarter of a number':q=>{const n=NQ(q)[0]||12;return groupsHTML(4,Math.min(Math.floor(n/4),6),'🍓')+vhCap('Share them into 4 equal groups.')}},
+money:{'How much a coin or note is worth':q=>vhMoneyCard(),
+ 'Finding a coin or note':q=>vhMoneyCard(),
+ 'Which is worth more':q=>vhMoneyCard(),
+ 'Which is worth less':q=>vhMoneyCard(),
+ 'Coin or note':q=>vhMoneyCard()+vhCap('1 and 2 are metal coins. 5 and more are paper notes.'),
+ 'Thinking: is it right?':q=>vhMoneyCard(),
+ 'Challenge: counting money':q=>vhMoneyCard()+vhCap('Start with the biggest, then count on the rest.'),
+ 'Challenge: reading a price':q=>vhMoneyCard()},
+shapes:{'Naming 2D shapes':q=>vhShapeChart(),
+ 'Counting sides':q=>vhShapeChart()+vhCap('Trace each side with your finger and count as you go.'),
+ 'Straight or curved sides':q=>`<div class="vhrow">${shapeSVG('circle')}${shapeSVG('square')}</div>`+vhCap('A circle has one curved side. A square has straight sides.'),
+ 'Flat (2D) or solid (3D)':q=>`<div class="vhrow">${shapeSVG('square')}<span class="big3d">🎲</span></div>`+vhCap('Flat shapes are drawn on paper. Solid shapes can be picked up.'),
+ 'Naming 3D shapes':q=>`<div class="turnrow"><span><b>⚽</b>sphere</span><span><b>🎲</b>cube</span><span><b>🥫</b>cylinder</span><span><b>🍦</b>cone</span><span><b>📦</b>cuboid</span></div>`,
+ 'Counting faces':q=>vhSolid(),
+ 'Flat or curved faces':q=>vhSolid()+vhCap('A shape with a curved face can roll.'),
+ 'Does it look the same when it turns':q=>`<div class="vhrow">${shapeRot('square',0)}<b>↻</b>${shapeRot('square',90).replace('<svg ','<svg style="overflow:visible" ')}</div>`+vhCap('A square looks the same after a quarter turn. Check if yours does too.'),
+ 'Thinking: is it true?':q=>vhShapeChart(),
+ 'Challenge: counting vertices':q=>vhShapeChart()+vhCap('Vertices are the corners. A shape has as many corners as sides.'),
+ 'Challenge: edges and vertices':q=>vhSolid()},
+position:{'Above, below, left, right':q=>vhGridGuide(),
+ 'Moving one square':q=>vhGridGuide()+vhCap('Move one square at a time and follow the arrow.'),
+ 'Between':q=>`<div class="patrow"><span>🍎</span><span>🍌</span><span>🍇</span></div>`+vhCap('The one in the middle is between the other two.'),
+ 'Next to, left and right':q=>vhGridGuide(),
+ 'On, under, next to':q=>`<div class="updown"><span>📦</span><span>🐱</span></div>`+vhCap('The cat is under the box. On top means above it, next to means beside it.'),
+ 'Thinking: is it true?':q=>vhGridGuide(),
+ 'Challenge: quarter, half and whole turns':q=>vhTurns()},
+measure:{'Longest':q=>lenSVG([['A',9,'#E5484D'],['B',5,'#3E7BFA']])+vhCap('They start at the same place. The one that ends furthest along is longest.'),
+ 'Shortest':q=>lenSVG([['A',9,'#E5484D'],['B',5,'#3E7BFA']])+vhCap('They start at the same place. The one that ends first is shortest.'),
+ 'Tallest':q=>towersSVG([['A',7,'#E5484D'],['B',4,'#3E7BFA']])+vhCap('Look at the tops of the towers.'),
+ 'Shortest tower':q=>towersSVG([['A',7,'#E5484D'],['B',4,'#3E7BFA']])+vhCap('Look at the tops of the towers.'),
+ 'Heavy or light':q=>balanceSVG('🍉','🍓',true)+vhCap('Imagine them on a balance. The heavier side goes down.'),
+ 'Reading a balance':q=>balanceSVG('🍉','🍓',true)+vhCap('The heavier side goes down. The lighter side goes up.'),
+ 'Full, half full, empty':q=>`<div class="glassrow"><div>${glassSVG(1)}<b>full</b></div><div>${glassSVG(.5)}<b>half full</b></div><div>${glassSVG(0)}<b>empty</b></div></div>`,
+ 'More or less water':q=>`<div class="glassrow"><div>${glassSVG(.8)}<b>more</b></div><div>${glassSVG(.3)}<b>less</b></div></div>`+vhCap('The glasses are the same size, so look at how high the water is.'),
+ 'Holds more':q=>`<div class="glassrow"><div>${glassSVG(1)}</div><div>${glassSVG(.4)}</div></div>`+vhCap('Imagine filling each one from a tap. The bigger one takes more water.'),
+ 'Holds less':q=>`<div class="glassrow"><div>${glassSVG(1)}</div><div>${glassSVG(.4)}</div></div>`+vhCap('The one that fills up first holds less.'),
+ 'Choosing the right tool':q=>vhTools(),
+ 'Reading a number on a scale':q=>vhScale(),
+ 'Thinking: is it always true?':q=>balanceSVG('🧱','🎈',true)+vhCap('A big balloon is lighter than a small brick. Size is not the same as weight.'),
+ 'Challenge: measuring with a ruler':q=>vhRuler(),
+ 'Challenge: measuring with cubes':q=>`<div class="cubes"><div class="crayon" style="width:${5*34-2}px"></div><div class="cuberow">${'<i></i>'.repeat(5)}</div></div>`+vhCap('Count the cubes along the object, starting at one end.')},
+time:{"O'clock":q=>vhClockGuide(),
+ 'Half past':q=>vhClockGuide(),
+ 'Where the long hand points':q=>vhClockGuide(),
+ 'Days of the week':q=>vhDays(),
+ 'Months of the year':q=>vhMonths(),
+ 'Time words':q=>vhDays()+vhCap('Yesterday is the day before today. Tomorrow is the day after.'),
+ 'Which takes longer':q=>vhClockGuide()+vhCap('Imagine doing each one. Which one keeps you busy for more time?'),
+ 'Thinking: is it true?':q=>vhClockGuide(),
+ 'Challenge: quarter past and quarter to':q=>vhClockGuide()+vhCap('Long hand on 3 is quarter past. On 9 it is quarter to.'),
+ 'Challenge: reading a calendar':q=>calHTML('Month',0,30)+vhCap('Each column is one day of the week. Find the date, then look up to the top.')},
+data:{'Reading a pictogram':q=>vhGraphGuide(),
+ 'Reading a block graph':q=>vhGraphGuide(),
+ 'Which sentence is true':q=>vhGraphGuide(),
+ 'Most':q=>vhGraphGuide()+vhCap('The longest row or the tallest column is the most.'),
+ 'Least':q=>vhGraphGuide()+vhCap('The shortest row or column is the least.'),
+ 'How many more':q=>vhGraphGuide(),
+ 'Carroll diagram':q=>vhCarroll(),
+ 'Venn diagram':q=>vhSortGuide(),
+ 'Reading a table':q=>tableHTML(['Pet','Children'],[['🐱 Cat','5'],['🐶 Dog','3']])+vhCap('Find the row you need, then read across to the number.'),
+ 'Sorting into groups':q=>`<div class="vhrow">${patternHTML(['🍎','🍌','🍇'])}${patternHTML(['🚗','🚌','🚲'])}</div>`+vhCap('Put the fruit in one group and the vehicles in another, then count one group.'),
+ 'How to find the answer to a question':q=>null,
+ 'Odd one out':q=>null,
+ 'Challenge: reading a tally':q=>vhTallyGuide(),
+ 'Challenge: total in a graph':q=>vhGraphGuide()+vhCap('Count each column, then add all the columns together.')},
+warm:{'Getting ready: counting to 10':q=>objs(8,'🍎')+vhCap('Touch each one as you count: 1, 2, 3…'),
+ 'Getting ready: matching a number to a group':q=>diceSVG(4)+vhCap('Count the dots, then find that number.'),
+ 'Getting ready: one more':q=>{const n=NQ(q)[0]||5;return trackHTML(0,10,v=>v===n)+vhCap('One more is the next number along the track.')},
+ 'Getting ready: one less':q=>{const n=NQ(q)[0]||5;return trackHTML(0,10,v=>v===n)+vhCap('One less is the number just before it on the track.')},
+ 'Getting ready: bigger number':q=>{const n=NQ(q);return trackHTML(0,10,v=>n.includes(v))+vhCap('The number further along the track is bigger.')},
+ 'Getting ready: which group has more':q=>vhMatch(),
+ 'Getting ready: naming shapes':q=>vhShapeChart(),
+ 'Getting ready: same number':q=>vhMatch()+vhCap('If none are left over, the groups have the same number.')}
+};
+function vhFor(q){try{const t=(S.topic&&S.topic.id)||'',f=VH[t]&&VH[t][q.kind];if(!f)return null;const h=f(q);return h&&String(h).trim()?h:null}catch(e){return null}}
+
+/* ================= exporting a page ================= */
+const EXC={bg:'#F6F9FF',grid:'#E4EBF8',card:'#FFFFFF',ink:'#1F2A5A',muted:'#5E6890',line:'#D5DEEF',teal:'#0E9A9A',red:'#E8492B',purple:'#6D4FE6',sun:'#FFB81F',soft:'#D3F2F0',green:'#1E8F52'};
+const EXF='"Baloo 2", "Arial Rounded MT Bold", system-ui, sans-serif',EXB='Nunito, system-ui, sans-serif';
+function exWrap(x,text,left,top,maxw,lh){const words=String(text).split(' ');let line='',y=top;
+ words.forEach(w=>{const test=line?line+' '+w:w;if(x.measureText(test).width>maxw&&line){x.fillText(line,left,y);y+=lh;line=w}else line=test});
+ if(line){x.fillText(line,left,y);y+=lh}return y}
+function exLines(x,text,maxw){const words=String(text).split(' ');const out=[];let line='';
+ words.forEach(w=>{const t=line?line+' '+w:w;if(x.measureText(t).width>maxw&&line){out.push(line);line=w}else line=t});
+ if(line)out.push(line);return out}
+function exCard(x,y,W,h,col){rrect(x,52,y,W-104,h,26);x.fillStyle=EXC.card;x.fill();x.lineWidth=4;x.strokeStyle=EXC.ink;x.stroke();
+ rrect(x,52,y,10,h,6);x.fillStyle=col||EXC.teal;x.fill()}
+function exHead(x,y,t,W){x.textAlign='left';x.fillStyle=EXC.ink;x.font=`800 40px ${EXF}`;x.fillText(t,78,y+14);return y+34}
+async function drawAnalytics(){const A=S.an;if(!A)return null;
+ const W=1080,cv=document.createElement('canvas');cv.width=W;cv.height=5200;const x=cv.getContext('2d');
+ try{await Promise.race([Promise.all([document.fonts.load('800 40px "Baloo 2"'),document.fonts.load('700 26px "Nunito"')]),new Promise(r=>setTimeout(r,1500))])}catch(e){}
+ x.fillStyle=EXC.bg;x.fillRect(0,0,W,cv.height);x.strokeStyle=EXC.grid;x.lineWidth=2;
+ for(let i=0;i<=W;i+=40){x.beginPath();x.moveTo(i,0);x.lineTo(i,cv.height);x.stroke()}
+ for(let j=0;j<=cv.height;j+=40){x.beginPath();x.moveTo(0,j);x.lineTo(W,j);x.stroke()}
+ x.textBaseline='alphabetic';x.textAlign='left';
+ /* header */
+ let y=70;x.fillStyle=EXC.ink;x.font=`800 52px ${EXF}`;x.fillText('Progress report',52,y+40);
+ x.font=`700 30px ${EXB}`;x.fillStyle=EXC.muted;x.fillText(`${A.who} · Maths Adventure, Stage 1`,52,y+84);
+ x.fillText(`${fmtShort(S.range.from)} to ${fmtShort(S.range.to)}`,52,y+124);
+ y+=170;
+ /* snapshot tiles */
+ const tiles=[[String(A.R0.length),'Tests finished'],[A.timeTxt,'Time practising'],[`${A.tried} of ${TOPICS.length}`,'Topics tried'],[`${A.acc}%`,'Right first time'],[String(A.streak),'Days in a row']];
+ const tw=(W-104-3*14)/4;
+ tiles.forEach((t,i)=>{const col=i%4,row=Math.floor(i/4),tx=52+col*(tw+14),ty=y+row*118;
+  rrect(x,tx,ty,tw,104,20);x.fillStyle=EXC.card;x.fill();x.lineWidth=3;x.strokeStyle=EXC.line;x.stroke();
+  x.textAlign='center';x.fillStyle=EXC.teal;fitFont(x,`800 N ${EXF}`,40,tw-24,t[0]);x.fillText(t[0],tx+tw/2,ty+56);
+  x.fillStyle=EXC.muted;x.font=`700 19px ${EXB}`;x.fillText(t[1],tx+tw/2,ty+86)});
+ y+=Math.ceil(tiles.length/4)*118+26;x.textAlign='left';
+ /* what to do next */
+ if(A.next){x.font=`700 23px ${EXB}`;const L=exLines(x,A.next.why,W-160),h=120+L.length*30;
+  exCard(x,y,W,h,EXC.red);let iy=exHead(x,y+34,'What to do next',W);
+  x.font=`800 30px ${EXF}`;x.fillStyle=EXC.red;x.fillText(`${A.next.t.emoji} Topic ${A.next.t.num}: ${A.next.t.title}`,78,iy+28);
+  x.font=`700 23px ${EXB}`;x.fillStyle=EXC.ink;L.forEach((l,i)=>x.fillText(l,78,iy+66+i*30));y+=h+22}
+ /* strengths and focus */
+ {const lines=Math.max(A.strong.length,A.focus.length,1),h=120+lines*34;exCard(x,y,W,h,EXC.teal);let iy=exHead(x,y+34,'Strengths and focus areas',W);
+  const colw=(W-160)/2;
+  [['Going well',A.strong,EXC.green,78],['Needs more practice',A.focus,EXC.red,78+colw+12]].forEach(([title,list,col,cx])=>{
+   x.font=`800 24px ${EXF}`;x.fillStyle=col;x.fillText(title,cx,iy+30);
+   x.font=`700 21px ${EXB}`;x.fillStyle=EXC.ink;
+   if(!list.length){x.fillStyle=EXC.muted;x.fillText('Nothing yet.',cx,iy+66)}
+   else list.forEach((o,i)=>{const t=`${o.t.title} — ${o.acc}%`;fitFont(x,`700 N ${EXB}`,21,colw-20,t);x.fillText(t,cx,iy+66+i*34)})});
+  y+=h+22}
+ /* three sections */
+ {const h=110+A.SR.length*52;exCard(x,y,W,h,EXC.purple);let iy=exHead(x,y+34,'The three sections',W);
+  A.SR.forEach((r,i)=>{const by=iy+24+i*52,bx=400,bw=W-bx-110;
+   x.fillStyle=EXC.ink;fitFont(x,`700 N ${EXB}`,22,300,r.label);x.fillText(r.label,78,by+26);
+   rrect(x,bx,by+6,bw,26,13);x.fillStyle=EXC.line;x.fill();
+   if(r.n){rrect(x,bx,by+6,Math.max(8,bw*(r.v||0)/100),26,13);x.fillStyle=EXC.teal;x.fill()}
+   x.textAlign='right';x.fillStyle=EXC.ink;x.font=`800 22px ${EXF}`;x.fillText(r.n?r.v+'%':'–',W-64,by+27);x.textAlign='left'});
+  y+=h+22}
+ /* progress over time */
+ if(A.pts.length>=2){x.font=`700 22px ${EXB}`;const h=316+(A.trend?exLines(x,A.trend,W-160).length*28:0);exCard(x,y,W,h,EXC.teal);let iy=exHead(x,y+34,'Progress over time',W);
+  const gx=138,gy=iy+24,gw=W-228,gh=170;
+  x.strokeStyle=EXC.line;x.lineWidth=2;
+  [0,25,50,75,100].forEach(v=>{const py=gy+gh-gh*v/100;x.beginPath();x.moveTo(gx,py);x.lineTo(gx+gw,py);x.stroke();
+   x.fillStyle=EXC.muted;x.font=`700 18px ${EXB}`;x.textAlign='right';x.fillText(v+'%',gx-10,py+6);x.textAlign='left'});
+  const pts=A.pts.slice(-12),step=pts.length>1?gw/(pts.length-1):0;
+  x.strokeStyle=EXC.teal;x.lineWidth=5;x.beginPath();
+  pts.forEach((p,i)=>{const px=gx+i*step,py=gy+gh-gh*p.v/100;i?x.lineTo(px,py):x.moveTo(px,py)});x.stroke();
+  pts.forEach((p,i)=>{const px=gx+i*step,py=gy+gh-gh*p.v/100;x.beginPath();x.arc(px,py,8,0,7);x.fillStyle=EXC.teal;x.fill();x.strokeStyle=EXC.ink;x.lineWidth=3;x.stroke()});
+  x.fillStyle=EXC.muted;x.font=`700 17px ${EXB}`;x.textAlign='center';
+  pts.forEach((p,i)=>{if(pts.length<=6||i===0||i===pts.length-1||i===Math.floor(pts.length/2))x.fillText(p.label,gx+i*step,gy+gh+30)});
+  x.textAlign='left';
+  if(A.trend){x.fillStyle=EXC.ink;x.font=`700 22px ${EXB}`;exWrap(x,A.trend,78,gy+gh+68,W-160,28)}
+  y+=h+22}
+ /* topic map */
+ {const rows=TOPICS.length,h=130+rows*38;exCard(x,y,W,h,EXC.purple);let iy=exHead(x,y+34,'Topic map',W);
+  x.font=`700 19px ${EXB}`;x.fillStyle=EXC.muted;x.fillText('Each square is one test, newest on the right.',78,iy+24);
+  const sc=v=>v==null?EXC.line:[EXC.line,'#BFE7E4','#68C9C3',EXC.teal][v]||EXC.line;
+  TOPICS.forEach((t,i)=>{const ry=iy+54+i*38;
+   x.fillStyle=EXC.ink;x.font=`700 21px ${EXB}`;const lbl=`${t.emoji} ${t.title}`;fitFont(x,`700 N ${EXB}`,21,520,lbl);x.fillText(lbl,78,ry+20);
+   const ts=(A.T[t.id].tests||[]).slice(-5);
+   for(let c=0;c<5;c++){const r=ts[c-(5-ts.length)];rrect(x,W-330+c*56,ry,44,26,8);x.fillStyle=r?(r.st?sc(r.st):'#E6DEFB'):EXC.line;x.fill()}});
+  y+=h+22}
+ /* independence */
+ {const h=246,tot=Math.max(1,A.n);exCard(x,y,W,h,EXC.teal);let iy=exHead(x,y+34,'Independence',W);
+  const bw=W-160,bx=78,by=iy+26;let cx0=bx;
+  [[A.f1,EXC.teal,'Right first try'],[A.f2,EXC.sun,'Right on second try'],[A.f0,'#CFC3F2','Shown the answer']].forEach(([v,col])=>{const w=bw*v/tot;if(w>0){x.fillStyle=col;x.fillRect(cx0,by,w,40);cx0+=w}});
+  x.strokeStyle=EXC.ink;x.lineWidth=3;x.strokeRect(bx,by,bw,40);
+  x.font=`700 21px ${EXB}`;let lx=bx;
+  [[A.f1,EXC.teal,'Right first try'],[A.f2,EXC.sun,'Right on second try'],[A.f0,'#CFC3F2','Shown the answer']].forEach(([v,col,lab])=>{
+   x.fillStyle=col;rrect(x,lx,by+66,22,22,6);x.fill();x.fillStyle=EXC.ink;x.fillText(`${lab} (${v})`,lx+30,by+84);lx+=x.measureText(`${lab} (${v})`).width+70});
+  x.fillStyle=EXC.muted;x.font=`700 21px ${EXB}`;x.fillText(`The Hint button was used on ${pct(A.hints,A.n)}% of questions.`,bx,by+120);
+  y+=h+22}
+ /* how it felt */
+ if(A.feel.easy+A.feel.ok+A.feel.tricky){const h=150;exCard(x,y,W,h,EXC.sun);let iy=exHead(x,y+34,'How it felt',W);
+  const items=[['😊 Felt easy',A.feel.easy],['🙂 Felt OK',A.feel.ok],['🤔 Felt tricky',A.feel.tricky]],iw=(W-160)/3;
+  items.forEach((it,i)=>{const ix=78+i*iw;x.textAlign='center';x.fillStyle=EXC.ink;x.font=`800 34px ${EXF}`;x.fillText(String(it[1]),ix+iw/2-10,iy+46);
+   x.fillStyle=EXC.muted;x.font=`700 20px ${EXB}`;x.fillText(it[0],ix+iw/2-10,iy+76)});
+  x.textAlign='left';y+=h+22}
+ /* footer */
+ x.fillStyle=EXC.muted;x.font=`700 20px ${EXB}`;x.fillText(`Made on ${fmtShort(dayKey(Date.now()))} · Maths Adventure`,52,y+30);y+=60;
+ const out=document.createElement('canvas');out.width=W;out.height=Math.min(y,cv.height);
+ out.getContext('2d').drawImage(cv,0,0);return out}
+async function exportAnalyticsImage(){const m=document.getElementById('expmsg');if(m)m.textContent='Making the picture…';
+ let cv=null;try{cv=await drawAnalytics()}catch(e){cv=null}
+ if(!cv){if(m)m.textContent='The picture could not be made on this device.';return}
+ cv.toBlob(async b=>{if(!b){if(m)m.textContent='The picture could not be made on this device.';return}
+  const name=`MathsAdventure_Stage1_Progress_${(NAMEOF(S.an.whoRaw)||'Learner')}_${S.range.from}_to_${S.range.to}.png`;
+  if(m)m.textContent=await saveFile(name,b)},'image/png')}
+const NAMEOF=s=>String(s||'').replace(/[^\p{L}\p{N}]+/gu,'');
+function exportCurricHTML(){const m=document.getElementById('cmsg');const p=S.pp?profById(S.pp):null;if(!p){if(m)m.textContent='Choose a learner first.';return}
+ const body=curricHTML(p,true).replace(/<button class="linkbtn"[^>]*>([\s\S]*?)<\/button>/g,'$1');
+ const css=`:root{--ink:#1F2A5A;--muted:#5E6890;--line:#D5DEEF;--card:#fff;--bg:#F6F9FF;--c:#0E9A9A;--cs:#D3F2F0}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:"Segoe UI",system-ui,-apple-system,Roboto,sans-serif;font-size:16px;line-height:1.55;padding:18px}
+.wrap{max-width:1000px;margin:0 auto}h1{font-size:30px;margin:0 0 4px}h2{font-size:22px;margin:0 0 10px}h3{font-size:17px;margin:12px 0 4px}
+.psec{background:var(--card);border:2px solid var(--ink);border-radius:18px;padding:16px 18px;margin:16px 0}
+.metrics{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:10px}
+.metric{flex:1 1 150px;background:var(--bg);border:2px solid var(--line);border-radius:14px;padding:10px 12px;text-align:center}
+.metric b{display:block;font-size:26px;color:var(--c)}.metric span{font-size:13px;color:var(--muted)}
+.means{background:var(--cs);border-radius:12px;padding:8px 12px;font-size:14.5px}
+.muted{color:var(--muted);font-size:14px}.isnot{color:#C0392B}
+.tablewrap{overflow-x:auto}table{border-collapse:collapse;width:100%;font-size:14px;min-width:640px}
+th,td{border-bottom:1.5px solid var(--line);padding:7px 9px;text-align:left;vertical-align:top}
+th{color:var(--muted);font-size:12.5px;text-transform:uppercase;letter-spacing:.04em}
+.cbadge{display:inline-block;border-radius:9px;padding:1px 8px;font-size:12.5px;font-weight:700}
+.cbadge.ok{background:#D9F2E4;color:#14663A}.cbadge.part{background:#FFEBD3;color:#9A5205}
+a{color:var(--c)}@media print{body{background:#fff}.psec{break-inside:avoid}}`;
+ const html=`<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex, nofollow"><title>Curriculum match — ${esc(p.name)}</title><style>${css}</style></head>
+<body><div class="wrap"><h1>Curriculum match</h1><p class="muted">${esc(p.name)} · Maths Adventure, Stage 1 · ${fmtShort(S.range.from)} to ${fmtShort(S.range.to)} · saved ${fmtShort(dayKey(Date.now()))}</p>${body}</div></body></html>`;
+ const name=`MathsAdventure_Stage1_CurriculumMatch_${NAMEOF(p.name)||'Learner'}_${S.range.to}.html`;
+ saveFile(name,new Blob([html],{type:'text/html'})).then(r=>{if(m)m.textContent=r})}
+
+/* ================= interactive visual hints ================= */
+/* A visual hint can be a picture (a string) or something to tap and drag: {w:box=>...}.
+   The child does the work. The widget never says the answer out loud. */
+const IV=(w)=>({w});
+const ivEl=(tag,cls,txt)=>{const e=document.createElement(tag);if(cls)e.className=cls;if(txt!=null)e.textContent=txt;return e};
+const ivCap=(box,t)=>{const p=ivEl('p','vhcap',t);box.appendChild(p);return p};
+const ivLine=(box,t)=>{const p=ivEl('p','ivh-count',t);box.appendChild(p);return p};
+
+/* 1. drag things into equal groups */
+function ivDrag(n,g,opt){opt=opt||{};return IV(box=>{
+ const e=opt.e||'🍓';
+ const pool=ivEl('div','ivh-pool ivh-drop');
+ for(let i=0;i<n;i++)pool.appendChild(ivEl('span','ivh-drag',e));
+ const gs=ivEl('div','ivh-groups'+(g>=4?' many':''));
+ for(let k=0;k<g;k++){const d=ivEl('div','ivh-grp ivh-drop');d.appendChild(ivEl('b',null,'group '+(k+1)));gs.appendChild(d)}
+ box.append(pool,gs);
+ const line=ivLine(box,`${n} to share`);
+ const cap=ivCap(box,opt.left?'Drag one into each group, then go round again. Stop when you cannot give every group one more.':'Drag one into each group, then go round again, until none are left.');
+ const update=()=>{const left=pool.querySelectorAll('.ivh-drag').length;const per=[...gs.children].map(x=>x.querySelectorAll('.ivh-drag').length);const same=per.every(v=>v===per[0]);
+  if(opt.left&&left<g&&same){line.textContent=left?`${left} cannot be shared. They are left over.`:'All shared. None left over.';return}
+  if(left){line.textContent=`${left} left to share`;return}
+  line.textContent=same?(opt.then||'All shared. Now count one group.'):'The groups are not the same yet. Move some across.'};
+ let item=null,ghost=null,dx=0,dy=0;
+ const zoneAt=(x,y)=>{if(ghost)ghost.style.display='none';const u=document.elementFromPoint(x,y);if(ghost)ghost.style.display='';const z=u&&u.closest('.ivh-drop');return z&&box.contains(z)?z:null};
+ box.addEventListener('pointerdown',ev=>{const t=ev.target.closest('.ivh-drag');if(!t)return;ev.preventDefault();
+  item=t;const r=t.getBoundingClientRect();dx=ev.clientX-r.left;dy=ev.clientY-r.top;
+  ghost=t.cloneNode(true);ghost.className='ivh-ghost';ghost.style.left=r.left+'px';ghost.style.top=r.top+'px';document.body.appendChild(ghost);
+  t.classList.add('lifting');try{box.setPointerCapture(ev.pointerId)}catch(_){}});
+ box.addEventListener('pointermove',ev=>{if(!ghost)return;ev.preventDefault();ghost.style.left=(ev.clientX-dx)+'px';ghost.style.top=(ev.clientY-dy)+'px';
+  box.querySelectorAll('.ivh-drop').forEach(z=>z.classList.remove('over'));const z=zoneAt(ev.clientX,ev.clientY);if(z)z.classList.add('over')});
+ const end=ev=>{if(!ghost)return;const z=zoneAt(ev.clientX,ev.clientY);if(z)z.appendChild(item);
+  item.classList.remove('lifting');ghost.remove();ghost=null;item=null;box.querySelectorAll('.ivh-drop').forEach(x=>x.classList.remove('over'));update()};
+ box.addEventListener('pointerup',end);box.addEventListener('pointercancel',end);
+})}
+
+/* 2. fill the ten frame: a red ones are already in, tap to add blue ones */
+function ivFrame(a,b,opt){opt=opt||{};const total=opt.upto||Math.max(10,Math.ceil((a+b)/10)*10);return IV(box=>{
+ const tf=ivEl('div','ivh-tf');const cells=[];
+ for(let f=0;f<total/10;f++){const fr=ivEl('span','ivh-frame');for(let i=0;i<10;i++){const c=ivEl('i');fr.appendChild(c);cells.push(c)}tf.appendChild(fr)}
+ cells.forEach((c,i)=>{if(i<a){c.textContent='🔴';c.classList.add('f')}});
+ box.appendChild(tf);
+ const fillTo=!!opt.upto;let placed=0;
+ const line=ivLine(box,fillTo?'Tap the empty squares to fill them.':`${b} blue ones to put in`);
+ ivCap(box,fillTo?`Keep tapping until every square is full. Count the blue ones you put in.`:'Tap the empty squares to put the blue ones in. Fill the first frame to 10 first.');
+ tf.addEventListener('click',ev=>{const c=ev.target.closest('i');if(!c||c.textContent)return;
+  if(!fillTo&&placed>=b)return;c.textContent='🔵';placed++;
+  if(fillTo){line.textContent=cells.every(x=>x.textContent)?'Full! How many blue ones did you put in?':`${placed} blue`}
+  else line.textContent=placed<b?`${b-placed} blue ones to put in`:'All in. Now count them all.'});
+})}
+
+/* 3. hop along the number track, one tap per jump */
+function ivTrack(start,opt){return IV(box=>{
+ const lo=0,hi=20,dir=opt.dir;
+ const tr=ivEl('div','ivh-track');const cells={};
+ for(let v=lo;v<=hi;v++){const s=ivEl('span',null,String(v));s.dataset.v=v;cells[v]=s;tr.appendChild(s)}
+ if(opt.goal!=null)cells[opt.goal].classList.add('goal');
+ cells[start].classList.add('on');box.appendChild(tr);
+ let pos=start,made=0;
+ const say=()=>{if(opt.jumps){line.textContent=made<opt.jumps?`${made} of ${opt.jumps} jumps`:`${opt.jumps} jumps. Where did you land?`}
+  else line.textContent=pos===opt.goal?`You got to ${opt.goal}. How many jumps did you make?`:`${made} jump${made===1?'':'s'}`};
+ const line=ivLine(box,'');say();
+ ivCap(box,opt.jumps?`Tap the next number ${dir<0?'back':'on'} to make one jump.`:`Tap the next number ${dir<0?'back':'on'} to jump. Stop on the number with the yellow edge.`);
+ tr.addEventListener('click',ev=>{const s=ev.target.closest('span');if(!s)return;
+  if(opt.jumps&&made>=opt.jumps)return;if(opt.goal!=null&&pos===opt.goal)return;
+  const v=+s.dataset.v;if(v!==pos+dir)return;
+  cells[pos].classList.remove('on');cells[pos].classList.add('trail');pos=v;cells[pos].classList.add('on');made++;say()});
+})}
+
+/* 4. break a ten into ones, then tap ones to take them away */
+function ivBreak(a,b){return IV(box=>{
+ const t0=Math.floor(a/10),o0=a%10;
+ const wrap=ivEl('div','ivh-to');
+ const rods=ivEl('span','ivh-rodrow');
+ const mkRod=()=>{const r=ivEl('span','ivh-rod');for(let i=0;i<10;i++)r.appendChild(ivEl('i'));return r};
+ for(let i=0;i<t0;i++)rods.appendChild(mkRod());
+ const had=ivEl('span','ivh-onesbox');had.appendChild(ivEl('b',null,'the ones you had'));const hadOnes=ivEl('span','ivh-ones');had.appendChild(hadOnes);
+ for(let i=0;i<o0;i++)hadOnes.appendChild(ivEl('i'));
+ const fresh=ivEl('span','ivh-onesbox fresh');fresh.appendChild(ivEl('b',null,'from the broken ten'));const freshOnes=ivEl('span','ivh-ones');fresh.appendChild(freshOnes);
+ wrap.append(rods,had);box.appendChild(wrap);
+ let broken=false,taken=0;
+ const tens=()=>rods.querySelectorAll('.ivh-rod').length,ones=()=>o0+(broken?10:0)-taken;
+ const tl=n=>`${n} ten${n===1?'':'s'}`;
+ const line=ivLine(box,b?`${tl(t0)} and ${o0} ones. ${o0} ones is not enough to take ${b} away.`:`${tl(t0)} and ${o0} ones.`);
+ const cap=ivCap(box,'Tap a ten to break it into 10 ones.');
+ wrap.addEventListener('click',ev=>{
+  const r=ev.target.closest('.ivh-rod');
+  if(r&&!broken){r.remove();rods.after(fresh);for(let i=0;i<10;i++)freshOnes.appendChild(ivEl('i'));broken=true;
+   line.textContent=`${tl(tens())} and ${o0+10} ones.`;
+   cap.textContent=b?`Now there are enough ones. Tap ${b} ones to take them away.`:'Count the tens and the ones now.';return}
+  const one=ev.target.closest('.ivh-ones i');
+  if(b&&broken&&one&&!one.classList.contains('gone')&&taken<b){one.classList.add('gone');taken++;
+   line.textContent=`${taken} taken away.`;
+   if(taken===b)cap.textContent=`All ${b} are gone. Count what is left: the tens and the ones.`}});
+})}
+
+/* 5. clock: choose a hand, then drag it round */
+function ivClock(opt){opt=opt||{};return IV(box=>{
+ let h=12,m=0,mode='minute';const step=opt.step||5;
+ const wrap=ivEl('div','ivh-clockwrap');
+ const modes=ivEl('div','ivh-modes');
+ const bH=ivEl('button','ghost ivh-mode','🟠 Hour hand');bH.dataset.mode='hour';
+ const bM=ivEl('button','ghost ivh-mode','🟣 Minute hand');bM.dataset.mode='minute';modes.append(bH,bM);
+ const NS='http://www.w3.org/2000/svg';const el=(n,at)=>{const e=document.createElementNS(NS,n);for(const k in at)e.setAttribute(k,at[k]);return e};
+ const svg=el('svg',{viewBox:'0 0 240 240',class:'ivh-clock'});
+ svg.appendChild(el('circle',{cx:120,cy:120,r:92,fill:'var(--card)',stroke:'var(--ink)','stroke-width':5}));
+ for(let i=0;i<60;i++){const a=-Math.PI/2+i*Math.PI/30,r1=i%5?86:81;svg.appendChild(el('line',{x1:120+r1*Math.cos(a),y1:120+r1*Math.sin(a),x2:120+90*Math.cos(a),y2:120+90*Math.sin(a),stroke:'var(--muted)','stroke-width':i%5?1.2:2.5}))}
+ for(let i=0;i<12;i++){const a=-Math.PI/2+i*Math.PI/6;
+  const t=el('text',{x:120+65*Math.cos(a),y:120+65*Math.sin(a)+7,'text-anchor':'middle','font-size':20,'font-weight':800,fill:'var(--ink)','font-family':'Baloo 2,sans-serif'});t.textContent=i===0?12:i;svg.appendChild(t);
+  if(opt.fives){const o=el('text',{x:120+108*Math.cos(a),y:120+108*Math.sin(a)+6,'text-anchor':'middle','font-size':14,'font-weight':800,fill:'var(--c)','font-family':'Baloo 2,sans-serif'});o.textContent=i*5;svg.appendChild(o)}}
+ const mh=el('line',{x1:120,y1:120,x2:120,y2:48,stroke:'#7A4FD0','stroke-width':6,'stroke-linecap':'round'});
+ const hh=el('line',{x1:120,y1:120,x2:120,y2:72,stroke:'#F2711C','stroke-width':10,'stroke-linecap':'round'});
+ const mk=el('circle',{cx:120,cy:48,r:11,fill:'#7A4FD0'}),hk=el('circle',{cx:120,cy:72,r:13,fill:'#F2711C'});
+ svg.append(hh,mh,hk,mk,el('circle',{cx:120,cy:120,r:7,fill:'var(--ink)'}));
+ const read=ivEl('p','ivh-count'),cap=ivEl('p','vhcap');
+ const draw=()=>{const ma=-Math.PI/2+(m/60)*2*Math.PI,ha=-Math.PI/2+((h%12)/12+m/720)*2*Math.PI;
+  const mx=120+72*Math.cos(ma),my=120+72*Math.sin(ma),hx=120+48*Math.cos(ha),hy=120+48*Math.sin(ha);
+  mh.setAttribute('x2',mx);mh.setAttribute('y2',my);mk.setAttribute('cx',mx);mk.setAttribute('cy',my);
+  hh.setAttribute('x2',hx);hh.setAttribute('y2',hy);hk.setAttribute('cx',hx);hk.setAttribute('cy',hy);
+  mk.setAttribute('opacity',mode==='minute'?.35:0);hk.setAttribute('opacity',mode==='hour'?.35:0);
+  mh.setAttribute('stroke-width',mode==='minute'?8:5);hh.setAttribute('stroke-width',mode==='hour'?12:8);
+  bH.classList.toggle('on',mode==='hour');bM.classList.toggle('on',mode==='minute');
+  read.textContent='Your clock says: '+timeWords(h,m);
+  cap.textContent=mode==='minute'?'Drag round the clock to move the long purple hand.':'Drag round the clock to move the short orange hand.'};
+ const frac=ev=>{const r=svg.getBoundingClientRect(),x=(ev.clientX-r.left)*240/r.width-120,y=(ev.clientY-r.top)*240/r.height-120;let a=Math.atan2(y,x)+Math.PI/2;if(a<0)a+=2*Math.PI;return a/(2*Math.PI)};
+ const move=ev=>{const f=frac(ev);if(mode==='minute')m=(Math.round(f*60/step)*step)%60;else{let hr=Math.round(f*12-m/60)%12;if(hr<=0)hr+=12;h=hr}draw()};
+ let dragging=false;
+ svg.addEventListener('pointerdown',ev=>{ev.preventDefault();dragging=true;try{svg.setPointerCapture(ev.pointerId)}catch(_){}move(ev)});
+ svg.addEventListener('pointermove',ev=>{if(dragging){ev.preventDefault();move(ev)}});
+ const stop=()=>{dragging=false};svg.addEventListener('pointerup',stop);svg.addEventListener('pointercancel',stop);
+ modes.addEventListener('click',ev=>{const b=ev.target.closest('.ivh-mode');if(!b)return;mode=b.dataset.mode;draw()});
+ const tip=ivEl('p','vhcap',opt.tip||'Make your clock look like the clock in the question. Then read what your clock says.');
+ wrap.append(modes,svg,read,cap,tip);box.appendChild(wrap);draw();
+})}
+
+/* 6. put the number into the Carroll diagram */
+function ivCarroll(n,cols){return IV(box=>{
+ box.appendChild(ivEl('p','ivh-count','')).innerHTML=`Put this number in a box: <span class="ivh-chip">${n}</span>`;
+ const t=ivEl('table','ivh-carroll');
+ t.innerHTML=`<tr><th></th><th>${cols[0]}</th><th>${cols[1]}</th></tr><tr><th>Even</th><td data-b="A"><small>A</small></td><td data-b="B"><small>B</small></td></tr><tr><th>Odd</th><td data-b="C"><small>C</small></td><td data-b="D"><small>D</small></td></tr>`;
+ box.appendChild(t);
+ const cap=ivCap(box,`Is ${n} even or odd? Is it ${cols[0].toLowerCase()}? Tap the box you think.`);
+ t.addEventListener('click',ev=>{const td=ev.target.closest('td');if(!td)return;
+  t.querySelectorAll('td').forEach(x=>{x.innerHTML=`<small>${x.dataset.b}</small>`});td.innerHTML=`<small>${td.dataset.b}</small><span class="ivh-chip">${n}</span>`;
+  cap.textContent=`You put ${n} in box ${td.dataset.b}. Look at its row and its column. Do both match ${n}?`});
+})}
+
+/* which questions get something to tap or drag (Stage 1) */
+const IN=q=>(String(q.text).match(/\d+/g)||[]).map(Number);
+const ivOver=(tid,kind,fn)=>{if(!VH[tid])VH[tid]={};const old=VH[tid][kind];VH[tid][kind]=q=>{let r=null;try{r=fn(q)}catch(e){r=null}return r||(old?old(q):null)}};
+ivOver('frac','Half of a number',q=>{const n=IN(q)[0];return n<=20?ivDrag(n,2):null});
+ivOver('frac','Half of a group of objects',q=>{const n=IN(q)[0];return n<=20?ivDrag(n,2):null});
+ivOver('frac','Challenge: a quarter of a number',q=>{const n=IN(q)[0];return n<=20?ivDrag(n,4):null});
+ivOver('add','Putting two groups together',q=>{const [a,b]=IN(q);return a+b<=20?ivFrame(a,b):null});
+ivOver('add','Adding within 20',q=>{const [a,b]=IN(q);return a+b<=20?ivFrame(a,b):null});
+ivOver('add','Pairs that make 10',q=>{const m=/(\d+) \+ \? = 10/.exec(q.text);const a=m?+m[1]:(String(q.visual||'').match(/🟢/g)||[]).length;return ivFrame(a,0,{upto:10})});
+ivOver('add','Challenge: pairs that make 20',q=>{const [a]=IN(q);return ivFrame(a,0,{upto:20})});
+ivOver('add','Adding by counting on',q=>{const [a,b]=IN(q);return a+b<=20?ivTrack(a,{dir:1,jumps:b}):null});
+ivOver('sub','Taking away by counting back',q=>{const [a,b]=IN(q);return a<=20?ivTrack(a,{dir:-1,jumps:b}):null});
+ivOver('sub','Taking away within 20',q=>{const [a,b]=IN(q);return a<=20?ivTrack(a,{dir:-1,jumps:b}):null});
+ivOver('sub','Finding the difference',q=>{const n=IN(q).slice(0,2).sort((x,y)=>x-y);return n[1]<=20?ivTrack(n[0],{dir:1,goal:n[1]}):null});
+ivOver('sub','Missing number in taking away',q=>{const [a,c]=IN(q);return a<=20?ivTrack(a,{dir:-1,goal:c}):null});
+ivOver('time',"O'clock",()=>ivClock({step:30}));
+ivOver('time','Half past',()=>ivClock({step:30}));
+ivOver('time','Where the long hand points',()=>ivClock({step:30,tip:'Set your clock to the time in the question. Then look where the long hand points.'}));
+ivOver('data','Carroll diagram',q=>{const m=/Which box does (\d+) go in/.exec(q.text);return m?ivCarroll(+m[1],['Less than 10','10 or more']):null});
 
 /* ================= storage ================= */
 const KEY3='mathsadv_s1';
@@ -1138,7 +1713,7 @@ function gateGo(){const v=+(document.getElementById('gatein').value||'').trim();
 
 /* ================= about ================= */
 const _u=s=>{try{return Array.from(atob(s)).map((c,i)=>String.fromCharCode(c.charCodeAt(0)^(7+i%5))).join('')}catch(e){return ''}};
-const APPVER='1.0',APPDATE='21 September 2026',OWNER=_u('U2lvYm5iZQ=='),LINKEDIN=_u('b3x9eng9JyZ9fHAmZWNlbG1tY2Upa2ZnJG5mJn5qYWBsb2ZyZGVrYyg=');
+const APPVER='1.2',APPDATE='21 September 2026',OWNER=_u('U2lvYm5iZQ=='),LINKEDIN=_u('b3x9eng9JyZ9fHAmZWNlbG1tY2Upa2ZnJG5mJn5qYWBsb2ZyZGVrYyg=');
 const LIlink=()=>`<a href="${LINKEDIN}" target="_blank" rel="noopener noreferrer">LinkedIn profile</a>`;
 function aboutHTML(){return `<h2>ℹ️ About this app</h2>
  <h3>About</h3><p>Maths Adventure Stage 1, version ${APPVER}. Produced ${APPDATE}. Created by ${OWNER}. Connect or get in touch: ${LIlink()}</p>
@@ -1211,7 +1786,7 @@ function renderQ(){hush();S.view='q';applyTheme();const t=S.topic,q=S.qs[S.i];S.
   :`<div class="numrow"><input id="numin" type="text" inputmode="numeric" pattern="[0-9]*" autocomplete="off" maxlength="4" aria-label="Your answer">${q.unit?`<span class="unit">${q.unit}</span>`:''}<button class="primary" data-act="check">Check</button></div>`;
  app.innerHTML=`<div style="${t.style}"><div class="topbar"><button class="icon" data-act="learn" aria-label="Back to the lesson">📖</button><div class="qcount">${S.i+1} of ${S.qs.length}</div><div class="tb-right">${soundIcon()}<button class="back" data-act="phelp">👪 Grown-ups</button></div></div>
  <div class="trail" aria-label="Stars so far">${trailHTML()}</div>${prof().clock?`<div class="qclockrow"><span class="qclock" id="qclock" aria-label="Time so far">⏱️ ${fmtClock(Date.now()-S.roundStart)}</span></div>`:''}
- <div class="card">${S.mode==='chal'?'<div class="chalbanner">⭐ Challenge question: this goes beyond Stage 1</div>':''}<div class="qtext"><button class="speak" data-act="say" data-say="q" aria-label="Read question aloud">🔊</button><span>${esc(q.text)}</span></div>${q.visual?`<div class="visual">${q.visual}</div>`:''}${ans}<div class="qfoot"><button class="ghost" data-act="hint">💡 Hint</button></div></div>
+ <div class="card">${S.mode==='chal'?'<div class="chalbanner">⭐ Challenge question: this goes beyond Stage 1</div>':''}<div class="qtext"><button class="speak" data-act="say" data-say="q" aria-label="Read question aloud">🔊</button><span>${esc(q.text)}</span></div>${q.visual?`<div class="visual">${q.visual}</div>`:''}${ans}<div class="qfoot"><button class="ghost" data-act="hint">💡 Hint</button><span id="vhslot"></span></div><div id="vhbox"></div></div>
  <div class="hootrow" id="hootrow">${pairHTML('normal')}<div class="speech info" id="speech" aria-live="polite">${startLine()}</div></div></div>`;
  const inp=document.getElementById('numin');if(inp){inp.addEventListener('keydown',e=>{if(e.key==='Enter')checkNum()});try{if(matchMedia('(pointer:fine)').matches)inp.focus()}catch(e){}}
  if(prof().clock&&!S.tickId)S.tickId=setInterval(tick,1000);
@@ -1309,22 +1884,30 @@ function helpHTML(){const t=S.topic,G=PARENT[t.id],q=S.view==='q'?S.qs[S.i]:null
  <div class="sheetbtns"><button class="primary" data-act="closesheet">${q?'Back to the question':'Back to the lesson'}</button>${q?'':'<button class="ghost" data-act="parents">Open the grown-ups page</button>'}</div>`}
 
 /* ================= grown-ups page ================= */
-function ensureRange(){if(S.range)return;const today=dayKey(Date.now());const first=DB.records.length?dayKey(Math.min(...DB.records.map(r=>r.s))):today;S.range={from:first,to:today}}
-function quickRange(d){const today=dayKey(Date.now());if(d==='all'){S.range=null;ensureRange();return}S.range={from:dayKey(Date.now()-(+d-1)*DAY),to:today}}
+function ensureRange(){if(S.range)return;const today=dayKey(Date.now());const first=DB.records.length?dayKey(Math.min(...DB.records.map(r=>r.s))):today;S.range={from:first,to:today,q:'all'}}
+function quickRange(d){const today=dayKey(Date.now());if(d==='all'){S.range=null;ensureRange();return}S.range={from:dayKey(Date.now()-(+d-1)*DAY),to:today,q:d}}
 const inRange=r=>{const k=dayKey(r.s);return k>=S.range.from&&k<=S.range.to};
 const recsOf=(pid,all)=>DB.records.filter(r=>r.p===pid&&(all||inRange(r))).sort((a,b)=>a.s-b.s);
-function rangeHTML(){return `<div class="range"><label>From <input type="date" id="rfrom" value="${S.range.from}"></label><label>To <input type="date" id="rto" value="${S.range.to}"></label></div><div class="range"><button class="ghost" data-act="rq" data-d="7">Last 7 days</button><button class="ghost" data-act="rq" data-d="30">Last 30 days</button><button class="ghost" data-act="rq" data-d="all">All time</button></div>`}
+function rangeHTML(){const q=S.range.q||'custom',qb=[['7','Last 7 days'],['30','Last 30 days'],['all','All time']];
+ const note=q==='all'?'Showing every round so far.':q==='custom'?`Showing ${fmtShort(S.range.from)} to ${fmtShort(S.range.to)}.`:`Showing the last ${q} days.`;
+ return `<div class="rangecard"><span class="pnavlab">Dates shown</span>
+ <div class="rquick">${qb.map(b=>`<button class="tab${q===b[0]?' sel':''}" data-act="rq" data-d="${b[0]}">${b[1]}</button>`).join('')}</div>
+ <div class="rdates"><label>From <input type="date" id="rfrom" value="${S.range.from}"></label><label>To <input type="date" id="rto" value="${S.range.to}"></label></div>
+ <p class="rnote">${note}</p></div>`}
 function renderParents(){if(!S.gate){gate(renderParents);return}hush();S.view='parents';S.armed='';applyTheme('classic');ensureRange();
  const ps=DB.profiles;if(!S.pp||!profById(S.pp))S.pp=(prof()||ps[0]||{}).id||null;const p=S.pp?profById(S.pp):null;
- const tabs=[['analytics','📊 Analytics'],['records','🗂️ Records'],['topics','📚 Topic guides'],['guide','💡 How to help'],['curric','📋 Curriculum match'],['data','⚙️ Settings and data'],['about','ℹ️ About this app']];
+ const tabsA=[['analytics','📊','Analytics'],['records','🗂️','Records'],['curric','📋','Curriculum match']];
+ const tabsB=[['topics','📚','Topic guides'],['guide','💡','How to help'],['data','⚙️','Settings and data'],['about','ℹ️','About this app']];
+ const tabBtn=t=>`<button class="tab${S.ptab===t[0]?' sel':''}" role="tab" aria-selected="${S.ptab===t[0]}" data-act="ptab" data-t="${t[0]}"><span class="ti">${t[1]}</span><span class="tl">${t[2]}</span></button>`;
  let body='';
  if(S.ptab==='about')body=`<section class="psec">${aboutHTML()}</section>`;
  else if(!p)body=`<section class="psec"><h2>No learners yet</h2><p>Add a learner from the first page to start.</p></section>${S.ptab==='data'?dataHTML(null):''}`;
  else if(S.ptab==='curric')body=curricHTML(p);else if(S.ptab==='analytics')body=analyticsHTML(p);else if(S.ptab==='records')body=recordsHTML(p);else if(S.ptab==='topics')body=topicsHTML(p);else if(S.ptab==='guide')body=guideHTML(p);else body=dataHTML(p);
  app.innerHTML=`<div style="--c:var(--geo);--cs:var(--geo-soft)"><div class="topbar"><button class="back" data-act="${prof()?'home':'who'}">Back</button></div>
  <div class="phead"><div class="hwrap">${hootSVG('normal','classic')}</div><div><p class="small">Maths Adventure, Stage 1</p><h1>For parents and teachers</h1><p class="muted">Choose a learner, then choose what you'd like to see.</p></div></div>
- ${ps.length?`<div class="lpick">${ps.map(x=>`<button class="chip${p&&x.id===p.id?' sel':''}" data-act="pp" data-id="${x.id}"><span class="miniav">${buddySVG(x.buddy)}</span>${esc(x.name)}</button>`).join('')}</div>`:''}
- <div class="tabs" role="tablist">${tabs.map(t=>`<button class="tab${S.ptab===t[0]?' sel':''}" role="tab" aria-selected="${S.ptab===t[0]}" data-act="ptab" data-t="${t[0]}">${t[1]}</button>`).join('')}</div>
+ <div class="pnav">${ps.length?`<div class="pnavgrp"><span class="pnavlab">Learner</span><div class="lpick">${ps.map(x=>`<button class="chip${p&&x.id===p.id?' sel':''}" data-act="pp" data-id="${x.id}"><span class="miniav">${buddySVG(x.buddy)}</span>${esc(x.name)}</button>`).join('')}</div></div>`:''}
+  <div class="pnavgrp"><span class="pnavlab">Progress</span><div class="tabs" role="tablist">${tabsA.map(tabBtn).join('')}</div></div>
+  <div class="pnavgrp"><span class="pnavlab">Guidance and settings</span><div class="tabs">${tabsB.map(tabBtn).join('')}</div></div></div>
  ${S.full?'<div class="notice">This device is running out of space for records. Make a backup and an Excel export, then remove old learners you no longer need.</div>':''}
  ${body}</div>`;window.scrollTo(0,0)}
 
@@ -1348,6 +1931,7 @@ function analyticsHTML(p){const R0=recsOf(p.id).filter(r=>r.tp!=='warm'&&r.m!=='
  const timeTxt=mins<60?`${mins} min`:`${Math.floor(mins/60)} h ${mins%60} min`;
  const accWord=acc>=85?"That's excellent.":acc>=70?"That's good, steady work.":acc>=50?"That's a fair start. Some topics need more practice.":"Many questions are still new. Short, regular practice will help most.";
  let h=rangeHTML();
+ h+=`<section class="psec"><h2>Save this page</h2><div class="exprow"><button class="primary" data-act="expimg">📸 Export as image</button><span class="expmsg" id="expmsg"></span></div><p class="muted">Saves a picture of this report that you can share or keep.</p></section>`;
  h+=`<section class="psec"><h2>Snapshot</h2><div class="metrics"><div class="metric"><b>${R0.length}</b><span>Tests finished</span></div><div class="metric"><b>${timeTxt}</b><span>Time practising</span></div><div class="metric"><b>${tried} of ${TOPICS.length}</b><span>Topics tried</span></div><div class="metric"><b>${acc}%</b><span>Right first time</span></div><div class="metric"><b>${streak}</b><span>Days in a row</span></div></div>
  <p class="means">💬 What this means: ${who} finished ${R0.length} test${R0.length===1?'':'s'} on ${days.size} different day${days.size===1?'':'s'} and got ${acc}% of questions right on the first try. ${accWord}</p></section>`;
  const K={};Q.forEach(q=>{const key=q.tp+'|'+q.k;K[key]=K[key]||{tp:q.tp,k:q.k,n:0,miss:0};K[key].n++;if(q.r!==1)K[key].miss++});
@@ -1397,13 +1981,15 @@ function analyticsHTML(p){const R0=recsOf(p.id).filter(r=>r.tp!=='warm'&&r.m!=='
  const tod={Morning:0,Afternoon:0,Evening:0,Night:0};R0.forEach(r=>{const hr=new Date(r.s).getHours();tod[hr>=5&&hr<12?'Morning':hr<17&&hr>=12?'Afternoon':hr>=17&&hr<21?'Evening':'Night']++});const topTod=Object.entries(tod).sort((a,b)=>b[1]-a[1])[0];
  h+=`<section class="psec"><h2>Practice habits</h2><div class="two"><div><h3>Last 5 weeks</h3><div class="cal">${cal.join('')}</div></div><div><h3>Time of day</h3>${barRows(Object.entries(tod).map(([k,v])=>({label:k,v:pct(v,R0.length),n:1})))}</div></div>
  <p class="means">💬 What this means: practised on ${active} of the 35 days up to ${fmtShort(S.range.to)}. Most practice happens in the ${topTod[0].toLowerCase()}. Short sessions on most days work better than one long session a week.</p></section>`;
+ const feel={easy:0,ok:0,tricky:0};R0.forEach(r=>{if(r.f&&feel[r.f]!==undefined)feel[r.f]++});
+ S.an={who,whoRaw:p.name,R0,n,f1,f2,f0,hints,acc,timeTxt,tried,streak,T,strong,focus,SR,pts,trend,next,feel};
  return h}
 
 
 /* ---- curriculum match ---- */
-function curricHTML(p){const R0=recsOf(p.id).filter(r=>r.m!=='chal'),Q=R0.flatMap(r=>r.q),who=esc(p.name);const cov=OBJ.filter(o=>o[3].startsWith('Covered')).length,part=OBJ.length-cov;
+function curricHTML(p,ex){const R0=recsOf(p.id).filter(r=>r.m!=='chal'),Q=R0.flatMap(r=>r.q),who=esc(p.name);const cov=OBJ.filter(o=>o[3].startsWith('Covered')).length,part=OBJ.length-cov;
  const subs={Nc:'Counting and sequences',Ni:'Whole numbers and calculating',Nm:'Money',Np:'Place value, ordering and rounding',Nf:'Fractions',Gt:'Time',Gg:'Shapes and measuring',Gp:'Position and movement',Ss:'Statistics',Sp:'Probability'};
- let h=rangeHTML()+`<section class="psec"><h2>How Maths Adventure matches Stage 1</h2><div class="metrics"><div class="metric"><b>${OBJ.length}</b><span>Stage 1 learning objectives</span></div><div class="metric"><b>${cov}</b><span>Practised fully in the app</span></div><div class="metric"><b>${part}</b><span>In the app, finished with a home activity</span></div></div>
+ let h=(ex?'':rangeHTML()+`<section class="psec"><h2>Save this page</h2><div class="exprow"><button class="primary" data-act="expcurric">📄 Export as HTML</button><span class="expmsg" id="cmsg"></span></div><p class="muted">Saves this page as a file that opens in any browser and prints to PDF.</p></section>`)+`<section class="psec"><h2>How Maths Adventure matches Stage 1</h2><div class="metrics"><div class="metric"><b>${OBJ.length}</b><span>Stage 1 learning objectives</span></div><div class="metric"><b>${cov}</b><span>Practised fully in the app</span></div><div class="metric"><b>${part}</b><span>In the app, finished with a home activity</span></div></div>
  <p class="means">💬 What this means: every Stage 1 learning objective has questions in the app. ${part} of them also need something hands-on, like handling real coins or sorting real objects, and the topic guides explain how.</p>
  <p class="muted">Checked against the Cambridge Primary Mathematics Curriculum Framework 0096, version 2.1 (published June 2025). The codes are the official objective codes, and the descriptions are in our own words. Maths Adventure is an independent app and <b class="isnot">IS NOT</b> affiliated with, endorsed by or connected to Cambridge University Press &amp; Assessment. "Cambridge" is a trademark of its owner, used here only to describe the topics covered. The order of topics in the app is our suggestion, not an official teaching order. <a href="https://www.cambridgeinternational.org/programmes-and-qualifications/cambridge-primary/curriculum/mathematics/" target="_blank" rel="noopener noreferrer">Official curriculum page</a></p></section>`;
  STRANDS.forEach((st,si)=>{const letter=['N','G','S'][si];const rows=OBJ.filter(o=>o[0][1]===letter);
@@ -1436,7 +2022,7 @@ function topicsHTML(p){return `<section class="psec"><h2>Topic guides</h2><p cla
 function guideHTML(p){const who=esc(p.name);return `<section class="psec"><h2>How a good session works</h2><ol class="steps">
  <li><b>Read the lesson together.</b> Tap 🔊 to hear it read aloud. Talk through both examples, and ask ${who} to explain one back to you.</li>
  <li><b>Let ${who} answer the 10 questions.</b> Sit nearby, but let them try each question on their own first.</li>
- <li><b>When they get stuck, suggest the 💡 Hint button first.</b> On any question, the 👪 Grown-ups button shows you what to say and, only if needed, the answer.</li>
+ <li><b>When they get stuck, suggest the 💡 Hint button first.</b> After that, a <b>🖼️ Visual hint</b> button appears. On some questions it shows a picture. On others it gives your child something to tap or drag, like sharing strawberries into groups or moving the clock hands. None of them gives the answer away. On any question, the 👪 Grown-ups button shows you what to say and, only if needed, the answer.</li>
  <li><b>Celebrate the effort at the end.</b> Make the result picture together, whatever the score.</li>
  <li><b>Check the Analytics tab once a week.</b> Follow "What to do next" and try one home activity from the topic guides.</li></ol></section>
  <section class="psec"><h2>Start with real objects</h2><p>Children learn a new idea best in three steps: first with <b>real objects</b> (counters, coins, blocks), then with <b>pictures</b>, and only then with <b>numbers and symbols</b>. The app covers the picture and symbol steps. Before a new topic, spend a few minutes with real objects, using the "Try at home" ideas in each topic guide.</p><p>For example, for 2 + 1 = 3: put down 2 counters and 1 counter and count them all, then draw 2 circles and 1 circle, then write 2 + 1 = 3.</p></section>
@@ -1446,7 +2032,7 @@ function guideHTML(p){const who=esc(p.name);return `<section class="psec"><h2>Ho
  <section class="psec"><h2>Self-check and reflection</h2><p>After every round, the app asks "How did that feel?" (easy, OK or tricky) and gives a next step. You can see the answers in Analytics and Records.</p><p>A simple <b>maths journal</b> (a small notebook) works well too: once a week, your child draws or writes one thing they learned and one thing that still feels tricky. Look at it together.</p></section>
  <section class="psec"><h2>Helping during practice</h2><ul>
  <li>Let your child read the question and try first. Step in only after a first try.</li>
- <li>Use the 💡 Hint button before explaining anything yourself.</li>
+ <li>Use the 💡 Hint button, then the 🖼️ Visual hint, before explaining anything yourself.</li>
  <li>Praise the effort and the method ("You counted really carefully!") more than the right answer.</li>
  <li>Use real objects (coins, buttons, fruit) whenever a question feels hard.</li>
  <li>Keep sessions short: one or two topics, about 10 to 15 minutes, and stop while it is still fun.</li>
@@ -1522,7 +2108,7 @@ async function exportXLSX(){const m=document.getElementById('xmsg');const who=(d
  const orows=[['Learner','Objective','What it means','Topic','Answers','Right first try','Right first try %']];ps.forEach(p=>{const qs=recs.filter(r=>r.p===p.id&&r.m!=='chal').flatMap(r=>r.q);OBJ.forEach(o=>{const oq=qs.filter(q=>q.o===o[0]);orows.push([p.name,o[0],o[1],TBY[o[2]].title,oq.length,oq.filter(q=>q.r===1).length,oq.length?pct(oq.filter(q=>q.r===1).length,oq.length):''])})});
  const blob=buildXLSX([{name:'Summary',rows:sum,widths:[16,26,30,8,11,15,17,18,17,11,11,26]},{name:'Tests',rows:tests,widths:[16,12,11,10,9,26,30,12,12,7,8,15,17,18,11]},{name:'Questions',rows:qrows,widths:[16,12,8,26,30,12,10,10,48,30,16,13,14,18,10,9]},{name:'Objectives',rows:orows,widths:[16,10,60,30,10,15,17]},{name:'Learners',rows:lrn,widths:[16,18,28,16,20]}]);
  const nmx=who==='one'?(ps[0].name.replace(/[^\p{L}\p{N}]+/gu,'')||'Learner'):'AllLearners';
- m.textContent=await saveFile(`MathsAdventure_Stage2_Records_${nmx}_${from}_to_${to}.xlsx`,blob)}
+ m.textContent=await saveFile(`MathsAdventure_Stage1_Records_${nmx}_${from}_to_${to}.xlsx`,blob)}
 
 /* ---- backup and restore ---- */
 async function doBackup(){const d=new Date(),m=document.getElementById('bmsg');const data={app:'maths-adventure',stage:1,v:3,at:Date.now(),profiles:DB.profiles,records:DB.records};
@@ -1568,7 +2154,10 @@ document.addEventListener('click',e=>{
  case 'say':say(S.say[b.dataset.say]||'');break;
  case 'opt':answer(S.qs[S.i].options[+b.dataset.i],b);break;
  case 'check':checkNum();break;
- case 'hint':if(!S.done){S.hint=true;sfx('tap');hootSays('info',`💡 ${esc(S.qs[S.i].hint)}`,'think')}break;
+ case 'hint':if(!S.done){S.hint=true;sfx('tap');hootSays('info',`💡 ${esc(S.qs[S.i].hint)}`,'think');const sl=document.getElementById('vhslot');if(sl&&!sl.innerHTML&&!document.getElementById('vhbox').innerHTML&&vhFor(S.qs[S.i]))sl.innerHTML='<button class="ghost vhbtn" data-act="vhint">🖼️ Visual hint</button>'}break;
+  case 'vhint':{const h=vhFor(S.qs[S.i]);if(h){S.hint=true;sfx('tap');const sl=document.getElementById('vhslot');if(sl)sl.innerHTML='';const box=document.getElementById('vhbox');
+   if(box){if(typeof h==='object'&&h.w){box.innerHTML=`<div class="vhbox" style="${S.topic.style}"><span class="vhttl">🖐️ Try it yourself</span><div class="ivh-body"></div></div>`;h.w(box.querySelector('.ivh-body'));hootSays('info','Try it with your finger!','think')}
+   else{box.innerHTML=`<div class="vhbox" style="${S.topic.style}"><span class="vhttl">🖼️ Here is a picture to help</span>${h}</div>`;hootSays('info','Look at the picture. It helps you work it out.','think')}}}break}
  case 'next':S.i++;if(S.i>=S.qs.length)renderEnd();else renderQ();break;
  case 'sound':DB.settings.sound=!DB.settings.sound;save();if(b.classList.contains('icon')){b.textContent=DB.settings.sound?'🔔':'🔕';b.setAttribute('aria-label','Sounds '+(DB.settings.sound?'on':'off'))}else b.textContent=DB.settings.sound?'🔔 On':'🔕 Off';sfx('tap');break;
  case 'phelp':gate(()=>openSheet(helpHTML(),S.topic.style));break;
@@ -1579,6 +2168,8 @@ document.addEventListener('click',e=>{
  case 'pp':S.pp=b.dataset.id;renderParents();break;
  case 'ptab':S.ptab=b.dataset.t;renderParents();break;
  case 'rq':quickRange(b.dataset.d);renderParents();break;
+  case 'expimg':exportAnalyticsImage();break;
+  case 'expcurric':exportCurricHTML();break;
  case 'makepic':makePic();break;
  case 'savepic':savePic();break;
  case 'psavename':{const v=cleanName(document.getElementById('pname').value),m=document.getElementById('pnamemsg'),p=profById(S.pp);if(!v){m.textContent='Type a name first.';break}p.name=v;save();renderParents();break}
@@ -1592,7 +2183,7 @@ document.addEventListener('click',e=>{
  case 'rreplace':if(S.armed!=='rrep'){S.armed='rrep';b.textContent='Tap again to replace everything'}else{S.armed='';restoreReplace()}break;
  }});
 document.addEventListener('change',e=>{const id=e.target&&e.target.id;
- if(id==='rfrom'||id==='rto'){const f=document.getElementById('rfrom').value,t=document.getElementById('rto').value;if(f&&t&&f<=t){S.range={from:f,to:t};renderParents()}}
+ if(id==='rfrom'||id==='rto'){const f=document.getElementById('rfrom').value,t=document.getElementById('rto').value;if(f&&t&&f<=t){S.range={from:f,to:t,q:'custom'};renderParents()}}
  if(id==='restorein'&&e.target.files&&e.target.files[0]){readRestore(e.target.files[0]);e.target.value=''}});
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeSheet()});
 if(prof())renderHome();else if(DB.profiles.length)renderWho();else renderWelcome();
