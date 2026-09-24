@@ -2133,6 +2133,8 @@ document.addEventListener('click',e=>{
  const b=e.target.closest('[data-act]');if(!b||b.disabled)return;const a=b.dataset.act;
  switch(a){
  case 'home':closeSheet();renderHome();break;
+ case 'navstay':closeSheet();break;
+ case 'navstop':closeSheet();renderLearn();break;
  case 'who':closeSheet();renderWho();break;
  case 'addp':renderWelcome();break;
  case 'pickp':DB.settings.active=b.dataset.id;save();sfx('tap');renderHome();break;
@@ -2186,7 +2188,34 @@ document.addEventListener('change',e=>{const id=e.target&&e.target.id;
  if(id==='rfrom'||id==='rto'){const f=document.getElementById('rfrom').value,t=document.getElementById('rto').value;if(f&&t&&f<=t){S.range={from:f,to:t,q:'custom'};renderParents()}}
  if(id==='restorein'&&e.target.files&&e.target.files[0]){readRestore(e.target.files[0]);e.target.value=''}});
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeSheet()});
-if(prof())renderHome();else if(DB.profiles.length)renderWho();else renderWelcome();
+/* ================= phone back button ================= */
+/* The app is one page, so the phone's back button used to close it straight away.
+   Each screen now has a level; the app keeps one browser history step per level,
+   so the back button walks back through the app instead. */
+const NAV={depth:0,ignore:0,fromPop:false};
+const navLevel=()=>({home:1,who:1,welcome:1,learn:2,parents:2,look:2,q:3,end:3})[S.view]||1;
+function navSync(){if(NAV.fromPop)return;const L=navLevel();
+ if(L>NAV.depth){while(NAV.depth<L){try{history.pushState({ma:NAV.depth+1},'')}catch(e){}NAV.depth++}}
+ else if(L<NAV.depth){const n=NAV.depth-L;NAV.depth=L;NAV.ignore++;try{history.go(-n)}catch(e){NAV.ignore--}}}
+['renderHome','renderWho','renderWelcome','renderLearn','renderParents','renderLook','renderQ','renderEnd'].forEach(n=>{
+ const f=window[n];if(typeof f!=='function')return;window[n]=function(){const r=f.apply(this,arguments);navSync();return r}});
+/* a tap anywhere puts back any missing steps (the phone only keeps steps made after a tap) */
+document.addEventListener('click',()=>{if(!NAV.fromPop&&NAV.depth<navLevel())navSync()},true);
+function navAsk(title,text,btns){openSheet(`<h2>${title}</h2><p>${text}</p><div class="sheetbtns">${btns}</div>`,(S.topic&&S.topic.style)||'--c:var(--geo);--cs:var(--geo-soft)')}
+window.addEventListener('popstate',()=>{
+ if(NAV.ignore>0){NAV.ignore--;return}
+ NAV.depth=Math.max(0,NAV.depth-1);
+ NAV.fromPop=true;
+ try{
+  if(document.getElementById('sheetback')){closeSheet();return}
+  const v=S.view;
+  if(v==='q'){hush();navAsk('Stop this round?',"These answers won't be saved.",'<button class="ghost" data-act="navstay">Keep going</button><button class="primary" data-act="navstop">Stop</button>');return}
+  if(v==='end'){renderLearn();return}
+  if(v==='learn'||v==='parents'||v==='look'){if(prof())renderHome();else renderWho();return}
+  navAsk('Close Maths Adventure?','Press the back button again to close. Or tap Stay to keep playing.','<button class="primary" data-act="navstay">Stay</button>');
+ }finally{NAV.fromPop=false}});
+
+NAV.fromPop=true;if(prof())renderHome();else if(DB.profiles.length)renderWho();else renderWelcome();NAV.fromPop=false;
 if('serviceWorker' in navigator&&/^https?:/.test(location.protocol)){window.addEventListener('load',()=>{navigator.serviceWorker.register('sw.js').catch(()=>{})})}
 </script>
 </body>

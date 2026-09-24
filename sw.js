@@ -1,5 +1,5 @@
 /* Maths Adventure Stage 1 offline support. Only this app's own old caches are removed, so the other stages on the same site keep working offline. Change CACHE for every new version so phones pick up the update. */
-const CACHE = 'maths-adventure-s1-r4';
+const CACHE = 'maths-adventure-s1-r5';
 const FILES = ['./', './index.html', './manifest.webmanifest', './icon-192.png', './icon-512.png', './icon-maskable-512.png', './apple-touch-icon.png'];
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(FILES)).then(() => self.skipWaiting()));
