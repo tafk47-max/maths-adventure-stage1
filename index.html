@@ -350,6 +350,8 @@ table.ctable td{font-size:15px}
 .coin small,.note small{font-size:10px;font-weight:800}
 .note{display:inline-flex;flex-direction:column;align-items:center;justify-content:center;width:92px;height:50px;border-radius:8px;border:3px solid rgba(0,0,0,.3);font-family:"Baloo 2",sans-serif;font-weight:800;font-size:22px;color:#23284A;line-height:1}
 .n5{background:#CDBDF5}.n10{background:#F2CE92}.n50{background:#A9DDBE}.n100{background:#F5AFAF}
+.u1{width:48px;height:48px;background:#D99058;font-size:15px}.u5{width:56px;height:56px;background:#D8DCE4;font-size:16px}.u10{width:44px;height:44px;background:#D8DCE4;font-size:14px}.u25{width:62px;height:62px;background:#D8DCE4;font-size:17px}.u50{width:70px;height:70px;background:#C7CEDA;font-size:18px}
+.note.usd{background:#B9DDB0}
 .tagwrap{display:flex;justify-content:center}.ptag{font-family:"Baloo 2",sans-serif;font-weight:800;font-size:30px;background:var(--sun);color:#1F2A5A;border:3px solid var(--ink);border-radius:14px 30px 30px 14px;padding:6px 22px}
 .patrow.sm{font-size:28px;gap:4px;flex-wrap:nowrap}
 .cuberow{display:flex;gap:2px}.cuberow i{width:32px;height:30px;background:#FF9A3D;border:2px solid var(--ink);border-radius:4px;display:block}
@@ -647,11 +649,11 @@ function circleCheckSVG(isCircle){return `<svg viewBox="0 0 200 150" class="shp"
 
 /* money: local currency (Saudi riyals by default) or simple coins */
 const CUR=()=>{try{return (DB&&DB.settings&&DB.settings.currency)||'SAR'}catch(e){return 'SAR'}};
-const DEN=()=>CUR()==='SAR'?[1,2,5,10,50,100]:[1,2,5,10,20,50];
-const mname=v=>CUR()==='SAR'?(v===1?'1 riyal':`${v} riyals`):`${v}c`;
-const munit=()=>CUR()==='SAR'?'riyals':'c';
-function moneyHTML(list){const sar=CUR()==='SAR';return `<div class="coinrow">${list.map(v=>sar?(v<5?`<span class="coin sar">${v}<small>riyal${v>1?'s':''}</small></span>`:`<span class="note n${v}">${v}<small>riyals</small></span>`):`<span class="coin c${v}">${v}c</span>`).join('')}</div>`}
-const tagHTML=v=>`<div class="tagwrap"><span class="ptag">🏷️ ${CUR()==='SAR'?v+' SAR':v+'c'}</span></div>`;
+const DEN=()=>CUR()==='SAR'?[1,2,5,10,50,100]:[1,5,10,25,100,500];
+const mname=v=>CUR()==='SAR'?(v===1?'1 riyal':`${v} riyals`):(v>=100?'$'+v/100:v+'¢');
+const munit=()=>CUR()==='SAR'?'riyals':'cents';
+function moneyHTML(list){const sar=CUR()==='SAR';return `<div class="coinrow">${list.map(v=>sar?(v<5?`<span class="coin sar">${v}<small>riyal${v>1?'s':''}</small></span>`:`<span class="note n${v}">${v}<small>riyals</small></span>`):(v>=100?`<span class="note usd">$${v/100}<small>dollar${v>100?'s':''}</small></span>`:`<span class="coin u${v}">${v}¢</span>`)).join('')}</div>`}
+const tagHTML=v=>`<div class="tagwrap"><span class="ptag">🏷️ ${CUR()==='SAR'?v+' SAR':(v>=100?'$'+v/100:v+'¢')}</span></div>`;
 const msum=l=>l.reduce((a,b)=>a+b,0);
 function pickMoney(n,max){let l,g=0;do{l=[...Array(n)].map(()=>pick(DEN()));g++}while((msum(l)>max)&&g<200);return l.sort((a,b)=>b-a)}
 
@@ -769,16 +771,16 @@ const TOPICS=[
   const n=4*R(1,5);return{obj:'2Nf.04',kind:'Challenge: a quarter of a number',text:`What is one quarter of ${n}?`,type:'num',answer:n/4,hint:`Share ${n} into 4 equal groups.`}}},
 
 {id:'money',strand:0,emoji:'💵',title:'Money',tag:'Know the coins and notes we use',objs:['1Nm.01'],
- intro:()=>CUR()==='SAR'?`<p>In Saudi Arabia we use <b>riyals</b>.</p><p>There are <b>coins</b>: 1 riyal and 2 riyals. There are <b>notes</b> made of paper: 5, 10, 50 and 100 riyals.</p><p>The <b>number</b> on the coin or note tells you what it is worth. A 10 riyal note is worth more than a 5 riyal note.</p>`:`<p>We pay for things with <b>coins</b>.</p><p>The <b>number</b> on a coin tells you what it is worth, not its size. <b>c</b> means cents.</p><p>A 10c coin is worth more than a 5c coin.</p>`,
- examples:()=>[{title:'Coins and notes',visual:moneyHTML(CUR()==='SAR'?[1,2,5,10]:[1,2,5,10]),text:CUR()==='SAR'?'These are a 1 riyal coin, a 2 riyal coin, a 5 riyal note and a 10 riyal note.':'These are coins worth 1c, 2c, 5c and 10c.'},{title:'Which is worth more?',visual:moneyHTML([10,5]),text:`The ${mname(10)} is worth more than the ${mname(5)}, because 10 is bigger than 5.`}],
- gen(){const sar=CUR()==='SAR';const D=DEN();const k=pick(['worth','worth','find','find','more','more',...(sar?['coinnote','coinnote']:[]),'twm']);
-  if(k==='worth'){const v=pick(D);return{obj:'1Nm.01',kind:'How much a coin or note is worth',text:`How much is this ${sar?(v<5?'coin':'note'):'coin'} worth?`,visual:moneyHTML([v]),type:'mc',options:fillOpts(mname(v),D.map(mname)),answer:mname(v),hint:'Read the number on it.'}}
+ intro:()=>CUR()==='SAR'?`<p>In Saudi Arabia we use <b>riyals</b>.</p><p>There are <b>coins</b>: 1 riyal and 2 riyals. There are <b>notes</b> made of paper: 5, 10, 50 and 100 riyals.</p><p>The <b>number</b> on the coin or note tells you what it is worth. A 10 riyal note is worth more than a 5 riyal note.</p>`:`<p>In the USA we use <b>dollars</b> and <b>cents</b>.</p><p>There are <b>coins</b>: 1¢, 5¢, 10¢ and 25¢. There are <b>notes</b> made of paper: $1, $5 and more.</p><p>The <b>number</b> on it tells you what it is worth, not its size. The 10¢ coin is small, but it is worth more than the 5¢ coin.</p>`,
+ examples:()=>[{title:'Coins and notes',visual:moneyHTML(CUR()==='SAR'?[1,2,5,10]:[1,5,10,100]),text:CUR()==='SAR'?'These are a 1 riyal coin, a 2 riyal coin, a 5 riyal note and a 10 riyal note.':'These are a 1¢ coin, a 5¢ coin, a 10¢ coin and a $1 note.'},{title:'Which is worth more?',visual:moneyHTML([10,5]),text:`The ${mname(10)} is worth more than the ${mname(5)}, because 10 is bigger than 5.`}],
+ gen(){const sar=CUR()==='SAR';const D=DEN();const k=pick(['worth','worth','find','find','more','more','coinnote','coinnote','twm']);
+  if(k==='worth'){const v=pick(D);return{obj:'1Nm.01',kind:'How much a coin or note is worth',text:`How much is this ${v<(sar?5:100)?'coin':'note'} worth?`,visual:moneyHTML([v]),type:'mc',options:fillOpts(mname(v),D.map(mname)),answer:mname(v),hint:'Read the number on it.'}}
   if(k==='find'){const four=shuffle(D).slice(0,3),v=pick(four);return{obj:'1Nm.01',kind:'Finding a coin or note',text:`Which one is ${mname(v)}?`,type:'mc',options:four.map(mname),optHTML:four.map(x=>moneyHTML([x])),answer:mname(v),hint:'Look for the number on each one.'}}
   if(k==='more'){const [a,b]=shuffle(D).slice(0,2),more=Math.random()<.5;return{obj:'1Nm.01',kind:more?'Which is worth more':'Which is worth less',text:`Which is worth ${more?'more':'less'}?`,type:'mc',options:[mname(a),mname(b)],optHTML:[a,b].map(x=>moneyHTML([x])),answer:mname(more?Math.max(a,b):Math.min(a,b)),hint:'The bigger number is worth more, whatever the size.'}}
-  if(k==='coinnote'){const v=pick(D);return{obj:'1Nm.01',kind:'Coin or note',text:`Is ${mname(v)} a coin or a note?`,type:'mc',options:['Coin','Note'],answer:v<5?'Coin':'Note',hint:'In riyals, 1 and 2 are coins. 5 and more are paper notes.'}}
+  if(k==='coinnote'){const v=pick(D);return{obj:'1Nm.01',kind:'Coin or note',text:`Is ${mname(v)} a coin or a note?`,type:'mc',options:['Coin','Note'],answer:v<(sar?5:100)?'Coin':'Note',hint:sar?'In riyals, 1 and 2 are coins. 5 and more are paper notes.':'Cents are coins. Dollars are paper notes.'}}
   return sar?{obj:'1Nm.01',kind:'Thinking: is it right?',text:`${pick(KIDS)} says the 1 riyal coin is worth more than the 5 riyal note, because a coin is heavier. Is that right?`,type:'mc',options:YN,answer:'No',hint:'The number tells you the value, not the weight.'}:{obj:'1Nm.01',kind:'Thinking: is it right?',text:`${pick(KIDS)} says the biggest coin is always worth the most. Is that right?`,type:'mc',options:YN,answer:'No',hint:'The number tells you the value, not the size.'}},
  chal(){if(Math.random()<.5){const l=pickMoney(2,20);return{obj:'2Nm.02',kind:'Challenge: counting money',text:'How much money is there altogether?',visual:moneyHTML(l),type:'num',unit:munit(),answer:msum(l),hint:'Start with the biggest, then count on.'}}
-  const v=R(3,20);return{obj:'2Nm.01',kind:'Challenge: reading a price',text:'How much does it cost?',visual:tagHTML(v),type:'mc',options:fillOpts(mname(v),[mname(v+1),mname(v+10),mname(Math.max(1,v-2))]),answer:mname(v),hint:CUR()==='SAR'?'SAR means riyals.':'c means cents.'}}},
+  const v=R(3,20);return{obj:'2Nm.01',kind:'Challenge: reading a price',text:'How much does it cost?',visual:tagHTML(v),type:'mc',options:fillOpts(mname(v),[mname(v+1),mname(v+10),mname(Math.max(1,v-2))]),answer:mname(v),hint:CUR()==='SAR'?'SAR means riyals.':'¢ means cents.'}}},
 
 {id:'shapes',strand:1,emoji:'🔷',title:'2D and 3D Shapes',tag:'Flat and solid shapes, sides, faces and turning',objs:['1Gg.01','1Gg.03','1Gg.06','1Gg.07'],
  intro:`<p><b>2D shapes</b> are <b>flat</b>, like a drawing on paper. <b>3D shapes</b> are <b>solid</b>, like a ball or a box. You can pick them up!</p><p>2D shapes have <b>sides</b>. Sides can be <b>straight</b> or <b>curved</b>. A triangle has 3 straight sides. A circle has 1 curved side.</p><p>3D shapes have <b>faces</b>. Faces can be <b>flat</b> or <b>curved</b>. A cube has 6 flat faces. A ball (sphere) is curved all over.</p><p>Some shapes look <b>the same</b> when you turn them. A circle always looks the same!</p>`,
@@ -986,7 +988,7 @@ function vhTensBar(t){let h='<div class="tensbar">';for(let i=0;i<10;i++)h+=`<sp
 function vhSplit(a,b,op){return `<table class="pv split"><tr><th></th><th>Tens</th><th>Ones</th></tr><tr><td>${a}</td><td>${Math.floor(a/10)*10}</td><td>${a%10}</td></tr><tr><td>${op} ${b}</td><td>${Math.floor(b/10)*10}</td><td>${b%10}</td></tr></table>`+vhCap('Do the ones first, then the tens.')}
 function vhHalfWall(){const row=(parts,lab)=>`<div class="fwrow">${[...Array(parts)].map(()=>`<span>${lab}</span>`).join('')}</div>`;
  return `<div class="fwall">${row(1,'1 whole')}${row(2,'half')}</div>`+vhCap('Two halves fit together to make one whole.')}
-function vhMoneyCard(){return moneyHTML([1,2,5,10])+vhCap('The number on it tells you what it is worth, not its size.')}
+function vhMoneyCard(){return moneyHTML(CUR()==='SAR'?[1,2,5,10]:[1,5,10,25])+vhCap('The number on it tells you what it is worth, not its size.')}
 function vhClockGuide(){let s='<svg viewBox="0 0 240 240" class="clock" style="max-width:230px"><circle cx="120" cy="120" r="92" fill="var(--card)" stroke="var(--ink)" stroke-width="5"/>';
  for(let i=0;i<12;i++){const a=-Math.PI/2+i*Math.PI/6,x=120+68*Math.cos(a),y=120+68*Math.sin(a);
   s+=`<text x="${x}" y="${y+7}" text-anchor="middle" font-size="20" font-weight="800" fill="var(--ink)" font-family="Baloo 2,sans-serif">${i===0?12:i}</text>`}
@@ -1713,7 +1715,7 @@ function gateGo(){const v=+(document.getElementById('gatein').value||'').trim();
 
 /* ================= about ================= */
 const _u=s=>{try{return Array.from(atob(s)).map((c,i)=>String.fromCharCode(c.charCodeAt(0)^(7+i%5))).join('')}catch(e){return ''}};
-const APPVER='1.2',APPDATE='21 September 2026',OWNER=_u('U2lvYm5iZQ=='),LINKEDIN=_u('b3x9eng9JyZ9fHAmZWNlbG1tY2Upa2ZnJG5mJn5qYWBsb2ZyZGVrYyg=');
+const APPVER='1.3',APPDATE='26 September 2026',OWNER=_u('U2lvYm5iZQ=='),LINKEDIN=_u('b3x9eng9JyZ9fHAmZWNlbG1tY2Upa2ZnJG5mJn5qYWBsb2ZyZGVrYyg=');
 const LIlink=()=>`<a href="${LINKEDIN}" target="_blank" rel="noopener noreferrer">LinkedIn profile</a>`;
 function aboutHTML(){return `<h2>ℹ️ About this app</h2>
  <h3>About</h3><p>Maths Adventure Stage 1, version ${APPVER}. Produced ${APPDATE}. Created by ${OWNER}. Connect or get in touch: ${LIlink()}</p>
@@ -2051,7 +2053,7 @@ function dataHTML(p){const lb=DB.settings.lastBackup,daysSince=lb?Math.floor((Da
  <div class="setrow"><b>Theme and buddy</b><span class="muted">${THEMES[p.theme].emoji} ${THEMES[p.theme].name}, buddy ${esc(p.buddy.name)}</span><button class="ghost" data-act="plook">Change</button></div>
  <div class="setrow"><b>Clock during practice</b><button class="ghost" data-act="pclock">${p.clock?'⏱️ On':'Off'}</button><span class="muted">Shows a count-up clock on question pages. Off is best for most children. The finishing time always shows on the result screen.</span></div>
  <div class="setrow"><b>Remove learner</b><button class="ghost warnbtn" data-act="pdel">Delete ${esc(p.name)} and their records</button></div></section>`;
- h+=`<section class="psec"><h2>Money</h2><div class="setrow"><button class="ghost" data-act="currency">${CUR()==='SAR'?'💵 Saudi riyals':'🪙 Simple coins (c)'}</button><span class="muted">Stage 1 learns to recognise your local money. Tap to switch. This applies to all learners.</span></div></section>`;
+ h+=`<section class="psec"><h2>Money</h2><p class="muted">Choose the money used in the questions. This applies to all learners.</p><div class="rquick">${[['SAR','💵 Saudi riyals (SAR)'],['USD','💲 US dollars (USD)']].map(c=>`<button class="tab${(CUR()==='SAR'?'SAR':'USD')===c[0]?' sel':''}" data-act="currency" data-c="${c[0]}" aria-pressed="${(CUR()==='SAR'?'SAR':'USD')===c[0]}">${c[1]}</button>`).join('')}</div><p class="muted">US dollars use real US coins and notes: 1¢, 5¢, 10¢, 25¢, 50¢ and dollar notes. Stage 1 uses whole amounts only.</p></section>`;
  h+=`<section class="psec"><h2>Sounds</h2><div class="setrow"><button class="ghost" data-act="sound">${DB.settings.sound?'🔔 On':'🔕 Off'}</button><span class="muted">Chimes for right answers and the end of a round.</span></div></section>`;
  h+=`<section class="psec"><h2>Export to Excel</h2><p>Creates an Excel file with four sheets: Summary, Tests, Questions and Learners.</p>
  <div class="setrow"><label><input type="radio" name="xwho" value="one" ${p?'checked':'disabled'}> ${p?esc(p.name)+' only':'This learner'}</label><label><input type="radio" name="xwho" value="all" ${p?'':'checked'}> All learners</label></div>
@@ -2150,7 +2152,7 @@ document.addEventListener('click',e=>{
  case 'learn':closeSheet();renderLearn();break;
  case 'start':startQuiz('normal');break;
  case 'startc':startQuiz('chal');break;
- case 'currency':DB.settings.currency=CUR()==='SAR'?'generic':'SAR';save();renderParents();break;
+ case 'currency':DB.settings.currency=b.dataset.c==='USD'?'USD':'SAR';save();renderParents();break;
  case 'flip':{S.flips=S.flips||{h:0,t:0};const hd=Math.random()<.5;S.flips[hd?'h':'t']++;const l=document.getElementById('fliplast');if(l)l.textContent=hd?'🪙 Heads!':'🪙 Tails!';document.getElementById('fh').textContent=S.flips.h;document.getElementById('ft').textContent=S.flips.t;sfx('tap');break}
  case 'flipreset':{S.flips={h:0,t:0};['fh','ft'].forEach(i=>{const e=document.getElementById(i);if(e)e.textContent='0'});const l=document.getElementById('fliplast');if(l)l.textContent='Tap to flip';break}
  case 'say':say(S.say[b.dataset.say]||'');break;
